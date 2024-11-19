@@ -4,14 +4,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import microsoftlogo from '../assets/images/microsoftlogo.svg';
-import oraclelogo from '../assets/images/oraclelogo.svg';
-import aviatrixlogo from '../assets/images/aviatrixlogo.svg';
-import ciscologo from '../assets/images/ciscologo.svg';
-import udemylogo from '../assets/images/udemylogo.svg';
-import skillfrontlogo from '../assets/images/skillfrontlogo.svg';
-import opswatlogo from '../assets/images/opswatlogo.svg';
-import codeacademylogo from '../assets/images/codeacademylogo.svg';
+import microsoft from '../assets/images/microsoft.svg';
+import oracle from '../assets/images/oracle.svg';
+import aviatrix from '../assets/images/aviatrix.svg';
+import tcm from '../assets/images/tcm.svg';
+import udemy from '../assets/images/udemy.svg';
+import codecademy from '../assets/images/codecademy.svg';
+import azure from '../assets/images/azure.svg';
+import appbrewery from '../assets/images/appbrewery.svg';
 
 const Landing: React.FC<LandingProps> = () => {
   return (
@@ -21,14 +21,16 @@ const Landing: React.FC<LandingProps> = () => {
         <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
           <div className="spacer-large"></div>
           <div className="spacer-large"></div>
-          <h1 className="text-[3.150rem] text-[#f2f2f2] leading-[1.150]">
-            Cybersecurity strategies for
+          <h1 className="text-[3.150rem] text-[#f2f2f2] leading-[1.2] font-[semi-bold]">
+            Digital tools designed for
             <br />
-            breakthrough growth
+            faster growth
             <br />
-            Our data-centric approach ensures every
-            <br />
-            decision delivers measurable results
+            <span className="text-[#919191] font-[regular]">
+              Shaped by skills and expertise refined
+              <br />
+              through years of pressure
+            </span>
           </h1>
           <div className="spacer-medium"></div>
           <div className="spacer-xs"></div>
@@ -43,11 +45,11 @@ const Landing: React.FC<LandingProps> = () => {
           </div>
           <div className="spacer-large"></div>
           <div className="text-[#f2f2f2] font-[extra-light]">
-            Clients working with us get 2x more from their marketing budget than
-            the industry average.
+            These are the well-established organizations and institutions that
+            have issued my certifications.
           </div>
           <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-gray-500"></div>
+          <div className="w-full h-[1px] bg-gray-700"></div>
           <div className="spacer-small"></div>
           <div className="spacer-small"></div>
           <Swiper
@@ -59,43 +61,444 @@ const Landing: React.FC<LandingProps> = () => {
             }}
             loop={true}
             modules={[Autoplay, Pagination]}
-            className="mySwiper"
+            className="hero-swiper"
           >
             <SwiperSlide className="">
-              <img src={microsoftlogo} />
+              <img src={microsoft} />
             </SwiperSlide>
             <SwiperSlide className="">
-              <img src={oraclelogo} />
+              <img src={oracle} />
             </SwiperSlide>
             <SwiperSlide className="">
-              <img src={aviatrixlogo} />
+              <img src={aviatrix} />
             </SwiperSlide>
             <SwiperSlide className="">
-              <img src={ciscologo} />
+              <img src={tcm} />
             </SwiperSlide>
             <SwiperSlide className="">
-              <img src={skillfrontlogo} />
+              <img src={codecademy} />
             </SwiperSlide>
             <SwiperSlide className="">
-              <img src={udemylogo} />
+              <img src={udemy} />
             </SwiperSlide>
             <SwiperSlide className="">
-              <img src={opswatlogo} />
+              <img src={appbrewery} />
             </SwiperSlide>
             <SwiperSlide className="">
-              <img src={codeacademylogo} />
+              <img src={azure} />
             </SwiperSlide>
-            {/* <SwiperSlide className="">
-              <img src={skillfrontlogo} />
-            </SwiperSlide> */}
           </Swiper>
         </div>
         <div className="spacer-large"></div>
       </section>
-      <section id="featured-blog"></section>
-      <section id="projects"></section>
-      <section id="certifications"></section>
-      <section id="testimonials"></section>
+      <section id="featured-blog">
+        <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
+          <div className="spacer-large"></div>
+          <div className="text-[#282828]">Blogs</div>
+          <div className="spacer-small"></div>
+          <div className="w-full h-[1px] bg-gray-300"></div>
+          <div className="spacer-small"></div>
+          <h2 className="text-[2.875rem] text-[#282828] leading-[1.2] font-[semi-bold]">
+            Our industry evolves rapidly <br />
+            <span className="text-[#919191] font-[regular]">
+              These blogs help you stay ahead
+            </span>
+          </h2>
+          <div className="spacer-medium"></div>
+          <div className="spacer-small"></div>
+          <div className="spacer-small"></div>
+          <div className="w-full h-[1px] bg-gray-300"></div>
+          <div className="spacer-small"></div>
+          <h3 className="text-[1.75rem] text-[#282828] font-[regular]">
+            Recent blogs
+          </h3>
+          <div className="spacer-medium"></div>
+          <div className="spacer-xs"></div>
+          <Swiper
+            spaceBetween="28"
+            slidesPerView={4}
+            autoplay={{
+              delay: 1000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            modules={[Autoplay, Pagination]}
+            className="blogs-swiper"
+          >
+            <SwiperSlide className="">
+              <div className="w-full h-full">
+                <div className="aspect-[1/1] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[2/3] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          <div className="spacer-large"></div>
+        </div>
+      </section>
+      <section id="projects" className="bg-[#282828]">
+        <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
+          <div className="spacer-large"></div>
+          <div className="text-[#f2f2f2]">Projects</div>
+          <div className="spacer-small"></div>
+          <div className="w-full h-[1px] bg-gray-700"></div>
+          <div className="spacer-small"></div>
+          <h2 className="text-[2.875rem] text-[#f2f2f2] leading-[1.2] font-[semi-bold]">
+            Check out my projects <br />
+            <span className="text-[#919191] font-[regular]">
+              These works inspires to create
+            </span>
+          </h2>
+          <div className="spacer-medium"></div>
+          <div className="spacer-small"></div>
+          <div className="spacer-small"></div>
+          <div className="w-full h-[1px] bg-gray-700"></div>
+          <div className="spacer-small"></div>
+          <h3 className="text-[1.75rem] text-[#f2f2f2] font-[regular]">
+            Recent projects
+          </h3>
+          <div className="spacer-medium"></div>
+          <div className="spacer-xs"></div>
+          <Swiper
+            spaceBetween="28"
+            slidesPerView={4}
+            autoplay={{
+              delay: 1000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            modules={[Autoplay, Pagination]}
+            className="blogs-swiper"
+          >
+            <SwiperSlide className="">
+              <div className="w-full h-full">
+                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#f2f2f2]">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[1/1] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#f2f2f2]">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[2/3] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#f2f2f2]">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#f2f2f2]">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          <div className="spacer-large"></div>
+        </div>
+      </section>
+      <section id="certifications" className="bg-[#717171]">
+        <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
+          <div className="spacer-large"></div>
+          <div className="text-[#f2f2f2]">Certifications</div>
+          <div className="spacer-small"></div>
+          <div className="w-full h-[1px] bg-gray-400"></div>
+          <div className="spacer-small"></div>
+          <h2 className="text-[2.875rem] text-[#f2f2f2] leading-[1.2] font-[semi-bold]">
+            Check out my certifications <br />
+            <span className="text-gray-300 font-[regular]">
+              These are the proofs of hardwork
+            </span>
+          </h2>
+          <div className="spacer-medium"></div>
+          <div className="spacer-small"></div>
+          <div className="spacer-small"></div>
+          <div className="w-full h-[1px] bg-gray-400"></div>
+          <div className="spacer-small"></div>
+          <h3 className="text-[1.75rem] text-[#f2f2f2] font-[regular]">
+            Recent certifications
+          </h3>
+          <div className="spacer-medium"></div>
+          <div className="spacer-xs"></div>
+          <Swiper
+            spaceBetween="28"
+            slidesPerView={4}
+            autoplay={{
+              delay: 1000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            modules={[Autoplay, Pagination]}
+            className="blogs-swiper"
+          >
+            <SwiperSlide className="">
+              <div className="w-full h-full">
+                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#f2f2f2]">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[1/1] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#f2f2f2]">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[2/3] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#f2f2f2]">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#f2f2f2]">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          <div className="spacer-large"></div>
+        </div>
+      </section>
+      <section id="testimonials">
+        <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
+          <div className="spacer-large"></div>
+          <div className="text-[#282828]">Testimonials</div>
+          <div className="spacer-small"></div>
+          <div className="w-full h-[1px] bg-gray-300"></div>
+          <div className="spacer-small"></div>
+          <h2 className="text-[2.875rem] text-[#282828] leading-[1.2] font-[semi-bold]">
+            Feedback from my mentors <br />
+            <span className="text-[#919191] font-[regular]">
+              These responses keep me grounded
+            </span>
+          </h2>
+          <div className="spacer-medium"></div>
+          <div className="spacer-small"></div>
+          <div className="spacer-small"></div>
+          <div className="w-full h-[1px] bg-gray-300"></div>
+          <div className="spacer-small"></div>
+          <h3 className="text-[1.75rem] text-[#282828] font-[regular]">
+            Recent testimonials
+          </h3>
+          <div className="spacer-medium"></div>
+          <div className="spacer-xs"></div>
+          <Swiper
+            spaceBetween="28"
+            slidesPerView={4}
+            autoplay={{
+              delay: 1000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            modules={[Autoplay, Pagination]}
+            className="blogs-swiper"
+          >
+            <SwiperSlide className="">
+              <div className="w-full h-full">
+                <div className="aspect-[1/1] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[2/3] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          <div className="spacer-large"></div>
+        </div>
+      </section>
     </>
   );
 };

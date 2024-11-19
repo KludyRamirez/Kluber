@@ -69,7 +69,7 @@
   padding: 0px;
 }
 
-.swiper-slide {
+.hero-swiper .swiper-slide {
   width: 138px !important;
   height: 48px !important;
 }
