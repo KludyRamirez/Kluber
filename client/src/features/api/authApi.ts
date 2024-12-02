@@ -17,7 +17,7 @@ export const authApi = createApi({
   endpoints: (builder) => ({
     login: builder.mutation<
       { accessToken: string; refreshToken: string }, // response data model, data na nakukuha mo from backend
-      { username: string; password: string } // arguments data model, data na binabato mo sa backend
+      { username: string; password: string } // arguments data model, data na binabato mo to backend
     >({
       query: (credentials) => ({
         url: 'login',

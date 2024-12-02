@@ -69,12 +69,185 @@
   padding: 0px;
 }
 
-.hero-swiper .swiper-slide {
-  width: 138px !important;
-  height: 48px !important;
+.swiper-slide img {
+  object-fit: cover;
 }
 
-.swiper-slide img {
+/* radiating-glow */
+
+@keyframes radiating-glow {
+  0% {
+    box-shadow: 0 0 2px 0px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 4px 0px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 2px 0px rgba(255, 255, 255, 0.6);
+  }
+}
+
+.radiating-glow {
+  position: relative;
+  display: block;
+  z-index: 10;
+  margin: auto;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+  border-radius: 0;
+  animation: radiating-glow 1.8s infinite;
+}
+
+/* light-sweep */
+
+.light-sweep {
+  display: inline-block;
   width: 100%;
-  object-fit: cover;
+  background: #282828 -webkit-linear-gradient(left, #282828, #fff) no-repeat 0 0 /
+    60px;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.3);
+  animation: sweep 2.5s ease-in infinite;
+}
+
+.black-sweep {
+  display: inline-block;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4) -webkit-linear-gradient(
+      left,
+      rgba(0, 0, 0, 0.4),
+      #111
+    ) no-repeat 0 0 / 60px;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.1);
+  animation: sweep 2.5s ease-in infinite;
+}
+
+@keyframes sweep {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* hero buttons animations */
+
+.custom-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  color: #282828;
+  text-decoration: none;
+  border: none;
+  transition: all 300ms;
+}
+
+.custom-btn:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.custom-btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  transform: scale(1.1, 1.3);
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.custom-btn:hover::after {
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+.custom-btn:active {
+  transform: scale(0.9);
+}
+
+/* reverse button */
+
+.reverse-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #f2f2f2;
+  text-decoration: none;
+  border: 1px solid #f2f2f2;
+  transition: all 300ms;
+}
+
+.reverse-btn:hover {
+  background-color: #f2f2f2;
+  color: #282828;
+}
+
+.reverse-btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  transform: scale(1.1, 1.3);
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.reverse-btn:hover::after {
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+.reverse-btn:active {
+  transform: scale(0.9);
+}
+
+@keyframes sheen {
+  0%,
+  100% {
+    left: 0;
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  10% {
+    left: calc(100% - 4px);
+  }
+  11%,
+  98% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+.shen {
+  position: relative;
+  animation: glow 2s infinite ease;
+}
+
+.shen:after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+.shen:after {
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(to right, #cfcfcf, #ffffff26);
+  z-index: 5;
+  animation: sheen 3s infinite;
 }
