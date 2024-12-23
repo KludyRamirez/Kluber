@@ -6,9 +6,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import microsoft from '../assets/images/microsoft.svg';
 import oracle from '../assets/images/oracle.svg';
+import oraclenw from '../assets/images/oracle-nw.svg';
 import aviatrix from '../assets/images/aviatrix.svg';
-import tcm from '../assets/images/tcm.svg';
-import udemy from '../assets/images/udemy.svg';
+import google from '../assets/images/google.svg';
+import coursera from '../assets/images/coursera.svg';
 import codecademy from '../assets/images/codecademy.svg';
 import azure from '../assets/images/azure.svg';
 import appbrewery from '../assets/images/appbrewery.svg';
@@ -19,14 +20,21 @@ import ociai from '../assets/images/ociai.png';
 import ociaiassoc from '../assets/images/ociaiassoc.png';
 import tcmcert from '../assets/images/tcmcert.png';
 import webdev from '../assets/images/webdev.jpg';
+import github from '../assets/images/github.svg';
 import ocibadge from '../assets/images/ocibadge.svg';
+import ocibadgecolor from '../assets/images/ocibadgecolor.svg';
 import ocidmbadge from '../assets/images/ocidmbadge.svg';
+import ocidmbadgecolor from '../assets/images/ocidmbadgecolor.svg';
 import ociaibadge from '../assets/images/ociaibadge.svg';
+import ociaibadgecolor from '../assets/images/ociaibadgecolor.svg';
 import ociaiprobadge from '../assets/images/ociaiprobadge.svg';
+import ociaiprobadgecolor from '../assets/images/ociaiprobadgecolor.svg';
 import sc900badge from '../assets/images/sc900badge.svg';
+import sc900badgecolor from '../assets/images/sc900badgecolor.svg';
 import tcmbadge from '../assets/images/tcmbadge.svg';
 import ofsabadge from '../assets/images/ofsabadge.svg';
 import icipbadge from '../assets/images/icipbadge.svg';
+import opswatnw from '../assets/images/opswat-nw.svg';
 import cyberbadge from '../assets/images/cyberbadge.svg';
 import cyberbadgecolor from '../assets/images/cyberbadgecolor.svg';
 import python1badge from '../assets/images/python1badge.svg';
@@ -35,6 +43,9 @@ import python2badge from '../assets/images/python2badge.svg';
 import js1badge from '../assets/images/js1badge.svg';
 import js2badge from '../assets/images/js2badge.svg';
 import acebadge from '../assets/images/acebadge.svg';
+import cisconw from '../assets/images/cisco-nw.svg';
+import microsoftnw from '../assets/images/microsoft-nw.svg';
+import aviatrixnw from '../assets/images/aviatrix-nw.svg';
 import skillfrontbadge from '../assets/images/skillfrontbadge.svg';
 import plvosaproj from '../assets/images/plvosaproj.png';
 import mlacproj from '../assets/images/mlacproj.png';
@@ -71,14 +82,14 @@ const Landing: React.FC<LandingProps> = () => {
             </div>
           </div>
           <div className="spacer-large"></div>
-          <div className="w-full h-[1px] bg-gray-400"></div>
-          <div className="spacer-small"></div>
           <div className="text-[#f2f2f2] font-[extra-light]">
             These are the organizations and institutions that have issued my
             certifications.
           </div>
           <div className="spacer-small"></div>
+          <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
           <div className="spacer-small"></div>
+          <div className="spacer-xs"></div>
           <Swiper
             spaceBetween="72"
             autoplay={{
@@ -104,23 +115,10 @@ const Landing: React.FC<LandingProps> = () => {
             className="hero-swiper"
           >
             <SwiperSlide className="">
-              <div className="w-full h-full flex justify-center items-center">
-                <img src={aviatrix} />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="">
-              <div className="w-full h-full flex justify-center items-center">
-                <img src={oracle} />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="">
-              <img src={udemy} />
+              <img src={oracle} />
             </SwiperSlide>
             <SwiperSlide className="">
               <img src={microsoft} />
-            </SwiperSlide>
-            <SwiperSlide className="">
-              <img src={tcm} />
             </SwiperSlide>
             <SwiperSlide className="">
               <img src={appbrewery} />
@@ -131,6 +129,12 @@ const Landing: React.FC<LandingProps> = () => {
             <SwiperSlide className="">
               <img src={codecademy} />
             </SwiperSlide>
+            <SwiperSlide className="">
+              <img src={coursera} />
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <img src={google} />
+            </SwiperSlide> 
           </Swiper>
         </div>
         <div className="spacer-large"></div>
@@ -265,10 +269,10 @@ const Landing: React.FC<LandingProps> = () => {
           <Swiper
             spaceBetween="20"
             slidesPerView={4}
-            autoplay={{
-              delay: 1000,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 1000,
+            //   disableOnInteraction: false,
+            // }}
             modules={[Autoplay, Pagination]}
             className="blogs-swiper"
           >
@@ -371,7 +375,6 @@ const Landing: React.FC<LandingProps> = () => {
           </Swiper>
           <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
-          <div className="spacer-small"></div>
           <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
           <div className="spacer-small"></div>
           <h3 className="text-[1.75rem] text-[#f2f2f2] font-[regular]">
@@ -379,7 +382,7 @@ const Landing: React.FC<LandingProps> = () => {
           </h3>
           <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
-          {/* <Swiper
+          <Swiper
             spaceBetween="20"
             slidesPerView={4}
             // autoplay={{
@@ -390,213 +393,136 @@ const Landing: React.FC<LandingProps> = () => {
             className="blogs-swiper"
           >
             <SwiperSlide>
-              <div className="w-full h-full p-2 relative">
-                <div className="shen aspect-[3/2] bg-white/10 backdrop-blur-md shadow-lg rounded-md">
-                  <img
-                    src={ocifabadge}
-                    className="p-2 cursor-pointer aspect-[3/2]"
-                  />
-                </div>
-
-                <div className="spacer-small"></div>
-                <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
-                  <span>June 27, 2024</span>
-                  <span>|</span>
-                  <span>by Oracle</span>
-                </div>
-                <div className="spacer-xs"></div>
-                <div className="text-[#f2f2f2]">
-                  Oracle Cloud Infrastructure 2024 Generative AI Certified
-                  Professional
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full p-2 relative">
-                <div className="shen aspect-[3/2] bg-white/10 backdrop-blur-md shadow-lg rounded-md">
-                  <img
-                    src={ociaibadge}
-                    className="p-2 cursor-pointer aspect-[3/2]"
-                  />
-                </div>
-
-                <div className="spacer-small"></div>
-                <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
-                  <span>June 10, 2024</span>
-                  <span>|</span>
-                  <span>by Oracle</span>
-                </div>
-                <div className="spacer-xs"></div>
-                <div className="text-[#f2f2f2]">
-                  Oracle Cloud Infrastructure 2023 AI Certified Foundations
-                  Associate
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full p-2 relative">
-                <div className="shen aspect-[3/2] bg-white/10 backdrop-blur-md shadow-lg rounded-md">
-                  <img
-                    src={sc900badge}
-                    className="cursor-pointer aspect-[3/2]"
-                  />
-                </div>
-
-                <div className="spacer-small"></div>
-                <div className="flex align-items gap-2 text-[.850rem] text-gray-300 rounded-md">
-                  <span>October 11, 2023</span>
-                  <span>|</span>
-                  <span>by Microsoft</span>
-                </div>
-                <div className="spacer-xs"></div>
-                <div className="text-[#f2f2f2]">
-                  Microsoft Certified: Security, Compliance, and Identity
-                  Fundamentals
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full p-2 relative">
-                <div className="w-full h-full flex justify-center items-center">
-                  <div className="shen aspect-[3/2] bg-white/10 backdrop-blur-md shadow-lg rounded-md">
-                    <img
-                      src={acebadge}
-                      className="cursor-pointer aspect-[3/2]"
-                    />
+              <div className="w-full h-full p-2 relative group">
+                <img
+                  src={ociaiprobadge}
+                  className="absolute top-[-50px] right-[5px] cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                />
+                <img
+                  src={ociaiprobadgecolor}
+                  className="cursor-pointer aspect-[3/2] hover:aspect-[1/1] z-20 transition-all duration-[500ms] ease-in"
+                />
+                <div className="relative z-20 bg-[#282828]">
+                  <div className="spacer-small"></div>
+                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                    <span>June 27, 2024</span>
+                    <span>|</span>
+                    <span>by Oracle</span>
+                  </div>
+                  <div className="spacer-xs"></div>
+                  <div className="text-[#f2f2f2]">
+                    Oracle Cloud Infrastructure 2024 Generative AI Certified
+                    Professional
                   </div>
                 </div>
-                <div className="spacer-small"></div>
-                <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
-                  <span>June 24, 2024</span>
-                  <span>|</span>
-                  <span>by Aviatrix</span>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2 relative group">
+                <img
+                  src={ociaibadge}
+                  className="absolute top-[-50px] right-[5px] cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                />
+                <img
+                  src={ociaibadgecolor}
+                  className="cursor-pointer aspect-[3/2] hover:aspect-[1/1] z-20 transition-all duration-[500ms] ease-in"
+                />
+                <div className="relative z-20 bg-[#282828]">
+                  <div className="spacer-small"></div>
+                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                    <span>June 10, 2024</span>
+                    <span>|</span>
+                    <span>by Oracle</span>
+                  </div>
+                  <div className="spacer-xs"></div>
+                  <div className="text-[#f2f2f2]">
+                    Oracle Cloud Infrastructure 2023 AI Certified Foundations
+                    Associate
+                  </div>
                 </div>
-                <div className="spacer-xs"></div>
-                <div className="text-[#f2f2f2]">
-                  Multicloud Network Associate
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <div className="w-full h-full p-2 relative group">
+                <img
+                  src={ocidmbadge}
+                  className="absolute top-[-50px] right-[5px] cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                />
+                <img
+                  src={ocidmbadgecolor}
+                  className="cursor-pointer aspect-[3/2] hover:aspect-[1/1] z-20 transition-all duration-[500ms] ease-in"
+                />
+                <div className="relative z-20 bg-[#282828]">
+                  <div className="spacer-small"></div>
+                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                    <span>October 11, 2023</span>
+                    <span>|</span>
+                    <span>by Microsoft</span>
+                  </div>
+                  <div className="spacer-xs"></div>
+                  <div className="text-[#f2f2f2]">
+                    Microsoft Certified: Security, Compliance, and Identity
+                    Fundamentals
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full h-full p-2">
-                <div className="w-full h-full flex justify-center items-center">
-                  <div className="shen aspect-[3/2] bg-white/10 backdrop-blur-md shadow-lg rounded-md">
-                    <img
-                      src={tcmbadge}
-                      className="cursor-pointer aspect-[3/2]"
-                    />
+              <div className="w-full h-full p-2 relative group">
+                <img
+                  src={ocibadge}
+                  className="absolute top-[-50px] right-[5px] cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                />
+                <img
+                  src={ocibadgecolor}
+                  className="cursor-pointer aspect-[3/2] hover:aspect-[1/1] z-20 transition-all duration-[500ms] ease-in"
+                />
+                <div className="relative z-20 bg-[#282828]">
+                  <div className="spacer-small"></div>
+                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                    <span>April 19, 2024</span>
+                    <span>|</span>
+                    <span>by London App Brewery</span>
                   </div>
-                </div>
-                <div className="spacer-small"></div>
-                <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
-                  <span>June 22, 2024</span>
-                  <span>|</span>
-                  <span>by TCM Academy</span>
-                </div>
-                <div className="spacer-xs"></div>
-                <div className="text-[#f2f2f2]">
-                  Practical Web Application Security and Testing
+                  <div className="spacer-xs"></div>
+                  <div className="text-[#f2f2f2]">
+                    The Complete 2024 Web Development Bootcamp
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
-          </Swiper> */}
-          <div className="w-full flex">
-            <div className="w-[25%] flex justify-start items-start border-r-[1px] border-b-[1px] border-[#3f3f3f] text-[#f2f2f2]">
-              <span className="ml-2 mt-4">Cisco Academy</span>
-            </div>
-            <div className="w-[75%] flex flex-wrap justify-start items-center gap-x-4 gap-y-8 border-b-[1px] border-[#3f3f3f] p-4">
-              <div className="cursor-pointer w-[148px] h-[148px] relative group">
+            <SwiperSlide>
+              <div className="w-full h-full p-2 relative group">
                 <img
-                  src={cyberbadgecolor}
-                  className="absolute top-0 left-0 p-2"
+                  src={sc900badge}
+                  className="absolute top-[-50px] right-[5px] cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
                 />
                 <img
-                  src={cyberbadge}
-                  className="relative group-hover:hidden p-2"
+                  src={sc900badgecolor}
+                  className="cursor-pointer aspect-[3/2] hover:aspect-[1/1] z-20 transition-all duration-[500ms] ease-in"
                 />
+                <div className="relative z-20 bg-[#282828]">
+                  <div className="spacer-small"></div>
+                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                    <span>June 22, 2024</span>
+                    <span>|</span>
+                    <span>by TCM Academy</span>
+                  </div>
+                  <div className="spacer-xs"></div>
+                  <div className="text-[#f2f2f2]">
+                    Practical Web Application Security and Testing
+                  </div>
+                </div>
               </div>
-              <div className="cursor-pointer w-[148px] h-[148px] relative group">
-                <img
-                  src={python1badgecolor}
-                  className="absolute top-0 left-0 p-2 invisible group-hover:visible"
-                />
-                <img
-                  src={python1badge}
-                  className="relative group-hover:hidden p-2"
-                />
-              </div>
-              <div className="w-[148px] h-[148px] p-2">
-                <img src={python2badge} className="" />
-              </div>
-              <div className="w-[148px] h-[148px] p-2">
-                <img src={js1badge} className="" />
-              </div>
-              <div className="w-[148px] h-[148px] p-2">
-                <img src={js2badge} className="" />
-              </div>
-              <div className="w-[148px] h-[148px] p-2">
-                <img src={js2badge} className="" />
-              </div>
-            </div>
-          </div>
-          <div className="w-full flex">
-            <div className="w-[25%] flex justify-start items-start border-r-[1px] border-b-[1px] border-[#3f3f3f] text-[#f2f2f2]">
-              <span className="ml-2 mt-4">Oracle Corporation</span>
-            </div>
-            <div className="w-[75%] flex flex-wrap justify-start items-center gap-x-4 gap-y-8 border-b-[1px] border-[#3f3f3f] p-4">
-              <div className="w-[148px] h-[148px]">
-                <img src={ociaiprobadge} className="" />
-              </div>
-              <div className="w-[148px] h-[148px]">
-                <img src={ociaibadge} className="" />
-              </div>
-              <div className="w-[148px] h-[148px]">
-                <img src={ocidmbadge} className="" />
-              </div>
-              <div className="w-[148px] h-[148px]">
-                <img src={ocibadge} className="" />
-              </div>
-            </div>
-          </div>
-          <div className="w-full flex">
-            <div className="w-[25%] flex justify-start items-start border-r-[1px] border-b-[1px] border-[#3f3f3f] text-[#f2f2f2]">
-              <span className="ml-2 mt-4">OPSWAT Academy</span>
-            </div>
-            <div className="w-[75%] flex flex-wrap justify-start items-center gap-x-4 gap-y-8 border-b-[1px] border-[#3f3f3f] p-4">
-              <div className="w-[148px] h-[148px]">
-                <img src={ofsabadge} className="" />
-              </div>
-              <div className="w-[148px] h-[148px]">
-                <img src={icipbadge} className="" />
-              </div>
-            </div>
-          </div>
-          <div className="w-full flex">
-            <div className="w-[25%] flex justify-start items-start border-r-[1px] border-b-[1px] border-[#3f3f3f] text-[#f2f2f2]">
-              <span className="ml-2 mt-4">Microsoft Corporation</span>
-            </div>
-            <div className="w-[75%] flex flex-wrap justify-start items-center gap-6 border-b-[1px] border-[#3f3f3f] p-4">
-              <div className="w-[148px] h-[148px]">
-                <img src={sc900badge} className="" />
-              </div>
-            </div>
-          </div>
-          <div className="w-full flex">
-            <div className="w-[25%] flex justify-start items-start border-r-[1px] border-[#3f3f3f] text-[#f2f2f2]">
-              <span className="ml-2 mt-4">Aviatrix Academy</span>
-            </div>
-            <div className="w-[75%] flex flex-wrap justify-start items-center gap-6 border-[#3f3f3f] p-4">
-              <div className="w-[148px] h-[148px]">
-                <img src={acebadge} className="" />
-              </div>
-            </div>
-          </div>
+            </SwiperSlide>
+          </Swiper>
+
           <div className="spacer-large"></div>
         </div>
       </section>
-      {/* <section id="projects" className="bg-[#282828] relative">
+      <section id="projects" className="bg-[#282828] relative">
         <img
-          className="absolute top-0 left-0 w-full h-full opacity-[0.20]"
+          className="absolute top-0 left-0 w-full h-full opacity-[0.16]"
           src={dots}
         />
         <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
@@ -706,7 +632,7 @@ const Landing: React.FC<LandingProps> = () => {
           </Swiper>
           <div className="spacer-large"></div>
         </div>
-      </section> */}
+      </section>
       {/* <section id="testimonials" className="relative">
         <img className="absolute bottom-0 w-full" src={dotunder} />
         <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
