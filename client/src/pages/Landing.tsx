@@ -33,6 +33,7 @@ import sc900badge from '../assets/images/sc900badge.svg';
 import sc900badgecolor from '../assets/images/sc900badgecolor.svg';
 import tcmbadge from '../assets/images/tcmbadge.svg';
 import ofsabadge from '../assets/images/ofsabadge.svg';
+import ofsabadgecolor from '../assets/images/ofsabadgecolor.svg';
 import icipbadge from '../assets/images/icipbadge.svg';
 import opswatnw from '../assets/images/opswat-nw.svg';
 import cyberbadge from '../assets/images/cyberbadge.svg';
@@ -396,11 +397,11 @@ const Landing: React.FC<LandingProps> = () => {
               <div className="w-full h-full p-2 relative group">
                 <img
                   src={ociaiprobadge}
-                  className="absolute top-[-50px] right-[5px] cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
                 />
                 <img
                   src={ociaiprobadgecolor}
-                  className="cursor-pointer aspect-[3/2] hover:aspect-[1/1] z-20 transition-all duration-[500ms] ease-in"
+                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
                 />
                 <div className="relative z-20 bg-[#282828]">
                   <div className="spacer-small"></div>
@@ -421,11 +422,11 @@ const Landing: React.FC<LandingProps> = () => {
               <div className="w-full h-full p-2 relative group">
                 <img
                   src={ociaibadge}
-                  className="absolute top-[-50px] right-[5px] cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
                 />
                 <img
                   src={ociaibadgecolor}
-                  className="cursor-pointer aspect-[3/2] hover:aspect-[1/1] z-20 transition-all duration-[500ms] ease-in"
+                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
                 />
                 <div className="relative z-20 bg-[#282828]">
                   <div className="spacer-small"></div>
@@ -446,11 +447,11 @@ const Landing: React.FC<LandingProps> = () => {
               <div className="w-full h-full p-2 relative group">
                 <img
                   src={ocidmbadge}
-                  className="absolute top-[-50px] right-[5px] cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
                 />
                 <img
                   src={ocidmbadgecolor}
-                  className="cursor-pointer aspect-[3/2] hover:aspect-[1/1] z-20 transition-all duration-[500ms] ease-in"
+                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
                 />
                 <div className="relative z-20 bg-[#282828]">
                   <div className="spacer-small"></div>
@@ -471,11 +472,11 @@ const Landing: React.FC<LandingProps> = () => {
               <div className="w-full h-full p-2 relative group">
                 <img
                   src={ocibadge}
-                  className="absolute top-[-50px] right-[5px] cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
                 />
                 <img
                   src={ocibadgecolor}
-                  className="cursor-pointer aspect-[3/2] hover:aspect-[1/1] z-20 transition-all duration-[500ms] ease-in"
+                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
                 />
                 <div className="relative z-20 bg-[#282828]">
                   <div className="spacer-small"></div>
@@ -495,11 +496,35 @@ const Landing: React.FC<LandingProps> = () => {
               <div className="w-full h-full p-2 relative group">
                 <img
                   src={sc900badge}
-                  className="absolute top-[-50px] right-[5px] cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
                 />
                 <img
                   src={sc900badgecolor}
-                  className="cursor-pointer aspect-[3/2] hover:aspect-[1/1] z-20 transition-all duration-[500ms] ease-in"
+                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
+                />
+                <div className="relative z-20 bg-[#282828]">
+                  <div className="spacer-small"></div>
+                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                    <span>June 22, 2024</span>
+                    <span>|</span>
+                    <span>by TCM Academy</span>
+                  </div>
+                  <div className="spacer-xs"></div>
+                  <div className="text-[#f2f2f2]">
+                    Practical Web Application Security and Testing
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2 relative group">
+                <img
+                  src={ofsabadge}
+                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                />
+                <img
+                  src={ofsabadgecolor}
+                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
                 />
                 <div className="relative z-20 bg-[#282828]">
                   <div className="spacer-small"></div>
