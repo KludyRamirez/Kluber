@@ -32,9 +32,11 @@ import ociaiprobadgecolor from '../assets/images/ociaiprobadgecolor.svg';
 import sc900badge from '../assets/images/sc900badge.svg';
 import sc900badgecolor from '../assets/images/sc900badgecolor.svg';
 import tcmbadge from '../assets/images/tcmbadge.svg';
+import tcmbadgecolor from '../assets/images/tcmbadgecolor.svg';
 import ofsabadge from '../assets/images/ofsabadge.svg';
 import ofsabadgecolor from '../assets/images/ofsabadgecolor.svg';
 import icipbadge from '../assets/images/icipbadge.svg';
+import icipbadgecolor from '../assets/images/icipbadgecolor.svg';
 import opswatnw from '../assets/images/opswat-nw.svg';
 import cyberbadge from '../assets/images/cyberbadge.svg';
 import cyberbadgecolor from '../assets/images/cyberbadgecolor.svg';
@@ -55,7 +57,7 @@ const Landing: React.FC<LandingProps> = () => {
   return (
     <>
       <Navbar />
-      <section id="hero" className="bg-[#282828] relative">
+      {/* <section id="hero" className="bg-[#282828] relative">
         <img
           className="absolute top-0 left-0 w-full h-full opacity-[0.16]"
           src={dots}
@@ -135,12 +137,12 @@ const Landing: React.FC<LandingProps> = () => {
             </SwiperSlide>
             <SwiperSlide className="">
               <img src={google} />
-            </SwiperSlide> 
+            </SwiperSlide>
           </Swiper>
         </div>
         <div className="spacer-large"></div>
-      </section>
-      <section id="featured-blog" className="bg-[#efefef]">
+      </section> */}
+      {/* <section id="featured-blog" className="bg-[#efefef]">
         <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
           <div className="spacer-large"></div>
           <div className="text-[#282828]">Blogs</div>
@@ -242,19 +244,122 @@ const Landing: React.FC<LandingProps> = () => {
           </Swiper>
           <div className="spacer-large"></div>
         </div>
-      </section>
-      <section id="certifications" className="bg-[#282828]">
+      </section> */}
+      {/* <section id="experiences" className="bg-[#efefef]">
         <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
           <div className="spacer-large"></div>
-          <div className="text-[#f2f2f2]">Certifications and Badges</div>
+          <div className="text-[#282828]">Blogs</div>
+          <div className="spacer-small"></div>
+          <div className="w-full h-[1px] bg-gray-300"></div>
+          <div className="spacer-small"></div>
+          <h2 className="text-[2.875rem] text-[#282828] leading-[1.275]">
+            <span className="">Our field evolves rapidly</span>
+            <br />
+            <span className="font-[regular] black-sweep">
+              These blogs help you stay ahead
+            </span>
+          </h2>
+          <div className="spacer-medium"></div>
+          <div className="spacer-small"></div>
+          <div className="spacer-small"></div>
+          <div className="w-full h-[1px] bg-gray-300"></div>
+          <div className="spacer-small"></div>
+          <h3 className="text-[1.75rem] text-[#282828] font-[regular]">
+            Recent blogs
+          </h3>
+          <div className="spacer-medium"></div>
+          <div className="spacer-xs"></div>
+          <Swiper
+            spaceBetween="20"
+            slidesPerView={4}
+            autoplay={{
+              delay: 1000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            modules={[Autoplay, Pagination]}
+            className="blogs-swiper"
+          >
+            <SwiperSlide className="">
+              <div className="w-full h-full">
+                <div className="aspect-[1/1] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#282828]">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[2/3] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          <div className="spacer-large"></div>
+        </div>
+      </section> */}
+      <section id="certifications" className="bg-[#282828]">
+        <div className="max-w-[86.8125rem] px-[1.25rem] mx-auto">
+          <div className="spacer-large"></div>
+          <div className="text-[#f2f2f2]">Badges and Certifications</div>
           <div className="spacer-small"></div>
           <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
           <div className="spacer-small"></div>
           <h2 className="text-[2.875rem] text-[#f2f2f2] leading-[1.275]">
-            <span className="">Check out my certifications</span>
+            <span className="">Check out my medals</span>
             <br />
             <span className="text-[#919191] font-[regular] light-sweep">
-              These are the proofs of hardwork
+              These are proof of commitment
             </span>
           </h2>
           <div className="spacer-medium"></div>
@@ -263,19 +368,281 @@ const Landing: React.FC<LandingProps> = () => {
           <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
           <div className="spacer-small"></div>
           <h3 className="text-[1.75rem] text-[#f2f2f2] font-[regular]">
-            Recent certifications
+            Recent badges
           </h3>
           <div className="spacer-medium"></div>
           <div className="spacer-xs"></div>
+
           <Swiper
             spaceBetween="20"
-            slidesPerView={4}
             // autoplay={{
-            //   delay: 1000,
+            //   delay: 2000,
             //   disableOnInteraction: false,
             // }}
+            loop={true}
+            breakpoints={{
+              639: {
+                slidesPerView: 1,
+              },
+              767: {
+                slidesPerView: 2,
+              },
+              1023: {
+                slidesPerView: 3,
+              },
+              1279: {
+                slidesPerView: 4,
+              },
+            }}
             modules={[Autoplay, Pagination]}
-            className="blogs-swiper"
+            className="badges-swiper"
+          >
+            <SwiperSlide>
+              <div className="w-full h-full p-2 relative group">
+                <div className="w-full flex justify-center">
+                  <img
+                    src={ociaiprobadge}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                  />
+                  <img
+                    src={ociaiprobadgecolor}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
+                  />
+                </div>
+                <div className="relative z-20 bg-[#282828]">
+                  <div className="spacer-small"></div>
+                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                    <span>June 27, 2024</span>
+                    <span>|</span>
+                    <span>by Oracle</span>
+                  </div>
+                  <div className="spacer-xs"></div>
+                  <div className="text-[#f2f2f2]">
+                    Oracle Cloud Infrastructure 2024 Generative AI Certified
+                    Professional
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2 relative group">
+                <div className="w-full flex justify-center">
+                  <img
+                    src={ociaibadge}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                  />
+                  <img
+                    src={ociaibadgecolor}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
+                  />
+                </div>
+                <div className="relative z-20 bg-[#282828]">
+                  <div className="spacer-small"></div>
+                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                    <span>June 10, 2024</span>
+                    <span>|</span>
+                    <span>by Oracle</span>
+                  </div>
+                  <div className="spacer-xs"></div>
+                  <div className="text-[#f2f2f2]">
+                    Oracle Cloud Infrastructure 2023 AI Certified Foundations
+                    Associate
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2 relative group">
+                <div className="w-full flex justify-center">
+                  <img
+                    src={ocidmbadge}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                  />
+                  <img
+                    src={ocidmbadgecolor}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
+                  />
+                </div>
+                <div className="relative z-20 bg-[#282828]">
+                  <div className="spacer-small"></div>
+                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                    <span>June 09, 2023</span>
+                    <span>|</span>
+                    <span>by Oracle</span>
+                  </div>
+                  <div className="spacer-xs"></div>
+                  <div className="text-[#f2f2f2]">
+                    Oracle Cloud Data Management 2023 Certified Foundations
+                    Associate
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2 relative group">
+                <div className="w-full flex justify-center">
+                  <img
+                    src={ocibadge}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                  />
+                  <img
+                    src={ocibadgecolor}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
+                  />
+                </div>
+                <div className="relative z-20 bg-[#282828]">
+                  <div className="spacer-small"></div>
+                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                    <span>June 08, 2023</span>
+                    <span>|</span>
+                    <span>by Oracle</span>
+                  </div>
+                  <div className="spacer-xs"></div>
+                  <div className="text-[#f2f2f2]">
+                    Oracle Cloud Infrastructure 2023 Certified Foundations
+                    Associate
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2 relative group">
+                <div className="w-full flex justify-center">
+                  <img
+                    src={sc900badge}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                  />
+                  <img
+                    src={sc900badgecolor}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
+                  />
+                </div>
+                <div className="relative z-20 bg-[#282828]">
+                  <div className="spacer-small"></div>
+                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                    <span>October 11, 2023</span>
+                    <span>|</span>
+                    <span>by Microsoft</span>
+                  </div>
+                  <div className="spacer-xs"></div>
+                  <div className="text-[#f2f2f2]">
+                    Microsoft Certified: Security, Compliance, and Identity
+                    Fundamentals
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2 relative group">
+                <div className="w-full flex justify-center">
+                  <img
+                    src={tcmbadge}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                  />
+                  <img
+                    src={tcmbadgecolor}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
+                  />
+                </div>
+                <div className="relative z-20 bg-[#282828]">
+                  <div className="spacer-small"></div>
+                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                    <span>June 22, 2024</span>
+                    <span>|</span>
+                    <span>by TCM Academy</span>
+                  </div>
+                  <div className="spacer-xs"></div>
+                  <div className="text-[#f2f2f2]">
+                    Practical Web Application Security and Testing
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2 relative group">
+                <div className="w-full flex justify-center">
+                  <img
+                    src={icipbadge}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                  />
+                  <img
+                    src={icipbadgecolor}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
+                  />
+                </div>
+                <div className="relative z-20 bg-[#282828]">
+                  <div className="spacer-small"></div>
+                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                    <span>June 25, 2024</span>
+                    <span>|</span>
+                    <span>by OPSWAT Academy</span>
+                  </div>
+                  <div className="spacer-xs"></div>
+                  <div className="text-[#f2f2f2]">
+                  OPSWAT Introduction to Critical Infrastructure Protection (ICIP)
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2 relative group">
+                <div className="w-full flex justify-center">
+                  <img
+                    src={ofsabadge}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
+                  />
+                  <img
+                    src={ofsabadgecolor}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
+                  />
+                </div>
+                <div className="relative z-20 bg-[#282828]">
+                  <div className="spacer-small"></div>
+                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                    <span>June 25, 2024</span>
+                    <span>|</span>
+                    <span>by OPSWAT Academy</span>
+                  </div>
+                  <div className="spacer-xs"></div>
+                  <div className="text-[#f2f2f2]">
+                    OPSWAT File Security Associate (OFSA)
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          <div className="spacer-medium"></div>
+          <div className="spacer-small"></div>
+          <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
+          <div className="spacer-small"></div>
+          <h3 className="text-[1.75rem] text-[#f2f2f2] font-[regular]">
+            Recent certifications
+          </h3>
+          <div className="spacer-medium"></div>
+          <div className="spacer-small"></div>
+          <Swiper
+            spaceBetween="20"
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            breakpoints={{
+              639: {
+                slidesPerView: 1,
+              },
+              767: {
+                slidesPerView: 2,
+              },
+              1023: {
+                slidesPerView: 3,
+              },
+              1279: {
+                slidesPerView: 4,
+              },
+            }}
+            modules={[Autoplay, Pagination]}
+            className="certifications-swiper"
           >
             <SwiperSlide>
               <div className="w-full h-full p-2">
@@ -317,7 +684,7 @@ const Landing: React.FC<LandingProps> = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide className="">
+            <SwiperSlide>
               <div className="w-full h-full p-2">
                 <img
                   src={sc900}
@@ -374,178 +741,10 @@ const Landing: React.FC<LandingProps> = () => {
               </div>
             </SwiperSlide>
           </Swiper>
-          <div className="spacer-medium"></div>
-          <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
-          <div className="spacer-small"></div>
-          <h3 className="text-[1.75rem] text-[#f2f2f2] font-[regular]">
-            Recent badges
-          </h3>
-          <div className="spacer-medium"></div>
-          <div className="spacer-small"></div>
-          <Swiper
-            spaceBetween="20"
-            slidesPerView={4}
-            // autoplay={{
-            //   delay: 1000,
-            //   disableOnInteraction: false,
-            // }}
-            modules={[Autoplay, Pagination]}
-            className="blogs-swiper"
-          >
-            <SwiperSlide>
-              <div className="w-full h-full p-2 relative group">
-                <img
-                  src={ociaiprobadge}
-                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
-                />
-                <img
-                  src={ociaiprobadgecolor}
-                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
-                />
-                <div className="relative z-20 bg-[#282828]">
-                  <div className="spacer-small"></div>
-                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
-                    <span>June 27, 2024</span>
-                    <span>|</span>
-                    <span>by Oracle</span>
-                  </div>
-                  <div className="spacer-xs"></div>
-                  <div className="text-[#f2f2f2]">
-                    Oracle Cloud Infrastructure 2024 Generative AI Certified
-                    Professional
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full p-2 relative group">
-                <img
-                  src={ociaibadge}
-                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
-                />
-                <img
-                  src={ociaibadgecolor}
-                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
-                />
-                <div className="relative z-20 bg-[#282828]">
-                  <div className="spacer-small"></div>
-                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
-                    <span>June 10, 2024</span>
-                    <span>|</span>
-                    <span>by Oracle</span>
-                  </div>
-                  <div className="spacer-xs"></div>
-                  <div className="text-[#f2f2f2]">
-                    Oracle Cloud Infrastructure 2023 AI Certified Foundations
-                    Associate
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="">
-              <div className="w-full h-full p-2 relative group">
-                <img
-                  src={ocidmbadge}
-                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
-                />
-                <img
-                  src={ocidmbadgecolor}
-                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
-                />
-                <div className="relative z-20 bg-[#282828]">
-                  <div className="spacer-small"></div>
-                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
-                    <span>October 11, 2023</span>
-                    <span>|</span>
-                    <span>by Microsoft</span>
-                  </div>
-                  <div className="spacer-xs"></div>
-                  <div className="text-[#f2f2f2]">
-                    Microsoft Certified: Security, Compliance, and Identity
-                    Fundamentals
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full p-2 relative group">
-                <img
-                  src={ocibadge}
-                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
-                />
-                <img
-                  src={ocibadgecolor}
-                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
-                />
-                <div className="relative z-20 bg-[#282828]">
-                  <div className="spacer-small"></div>
-                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
-                    <span>April 19, 2024</span>
-                    <span>|</span>
-                    <span>by London App Brewery</span>
-                  </div>
-                  <div className="spacer-xs"></div>
-                  <div className="text-[#f2f2f2]">
-                    The Complete 2024 Web Development Bootcamp
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full p-2 relative group">
-                <img
-                  src={sc900badge}
-                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
-                />
-                <img
-                  src={sc900badgecolor}
-                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
-                />
-                <div className="relative z-20 bg-[#282828]">
-                  <div className="spacer-small"></div>
-                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
-                    <span>June 22, 2024</span>
-                    <span>|</span>
-                    <span>by TCM Academy</span>
-                  </div>
-                  <div className="spacer-xs"></div>
-                  <div className="text-[#f2f2f2]">
-                    Practical Web Application Security and Testing
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full p-2 relative group">
-                <img
-                  src={ofsabadge}
-                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in group-hover:hidden"
-                />
-                <img
-                  src={ofsabadgecolor}
-                  className="cursor-pointer aspect-[3/2] z-20 transition-all duration-[500ms] ease-in hidden group-hover:block"
-                />
-                <div className="relative z-20 bg-[#282828]">
-                  <div className="spacer-small"></div>
-                  <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
-                    <span>June 22, 2024</span>
-                    <span>|</span>
-                    <span>by TCM Academy</span>
-                  </div>
-                  <div className="spacer-xs"></div>
-                  <div className="text-[#f2f2f2]">
-                    Practical Web Application Security and Testing
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
-
           <div className="spacer-large"></div>
         </div>
       </section>
-      <section id="projects" className="bg-[#282828] relative">
+      {/* <section id="projects" className="bg-[#282828] relative">
         <img
           className="absolute top-0 left-0 w-full h-full opacity-[0.16]"
           src={dots}
@@ -657,7 +856,7 @@ const Landing: React.FC<LandingProps> = () => {
           </Swiper>
           <div className="spacer-large"></div>
         </div>
-      </section>
+      </section> */}
       {/* <section id="testimonials" className="relative">
         <img className="absolute bottom-0 w-full" src={dotunder} />
         <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
