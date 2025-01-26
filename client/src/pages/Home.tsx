@@ -1,4 +1,5 @@
-import { LandingProps } from '../types/LandingProps';
+import React, { useState, useEffect, useRef } from 'react';
+import { Home } from '../types/Home';
 import Navbar from '../components/Navbar/Navbar';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
@@ -63,12 +64,58 @@ import { Timeline } from 'flowbite-react';
 import { Button } from 'flowbite-react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { HiCalendar } from 'react-icons/hi';
+import StarsCanvas from '../components/Background/StarBackground';
 
-const Landing: React.FC<LandingProps> = () => {
+const Home: React.FC<Home> = () => {
+  const [isBlogsSectionActive, setIsBlogsSectionActive] = useState(false);
+  const [isExperiencesSectionActive, setIsExperiencesSectionActive] =
+    useState(false);
+
+  const blogsSectionRef = useRef<HTMLDivElement>(null);
+  const experiencesSectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const blogsObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsBlogsSectionActive(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    const experiencesObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsExperiencesSectionActive(entry.isIntersecting);
+      },
+      { threshold: 0.4 }
+    );
+
+    if (blogsSectionRef.current) {
+      blogsObserver.observe(blogsSectionRef.current);
+    }
+
+    if (experiencesSectionRef.current) {
+      experiencesObserver.observe(experiencesSectionRef.current);
+    }
+
+    return () => {
+      if (blogsSectionRef.current) {
+        blogsObserver.unobserve(blogsSectionRef.current);
+      }
+
+      if (experiencesSectionRef.current) {
+        experiencesObserver.unobserve(experiencesSectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <>
-      <Navbar />
-      <section id="hero" className="bg-[#282828] relative">
+      <StarsCanvas />
+      <Navbar
+        isBlogsSectionActive={isBlogsSectionActive}
+        isExperiencesSectionActive={isExperiencesSectionActive}
+      />
+      <section id="hero" className="relative">
         <div className="max-w-[86.8125rem] px-[1.25rem] mx-auto relative z-20">
           <div className="spacer-large"></div>
           <div className="spacer-large"></div>
@@ -149,7 +196,7 @@ const Landing: React.FC<LandingProps> = () => {
         </div>
         <div className="spacer-large"></div>
       </section>
-      {/* <section id="featured-blog" className="bg-[#efefef]">
+      <section id="blogs" ref={blogsSectionRef} className="bg-[#efefef]">
         <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
           <div className="spacer-large"></div>
           <div className="text-[#282828]">Blogs</div>
@@ -251,13 +298,13 @@ const Landing: React.FC<LandingProps> = () => {
           </Swiper>
           <div className="spacer-large"></div>
         </div>
-      </section> */}
-      <section id="certifications" className="bg-[#282828]">
+      </section>
+      <section id="experiences" ref={experiencesSectionRef}>
         <div className="max-w-[86.8125rem] px-[1.25rem] mx-auto">
           <div className="spacer-large"></div>
           <div className="text-[#f2f2f2]">Experiences</div>
           <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
+          <div className="w-full h-[1px] bg-[#3c3c3c]"></div>
           <div className="spacer-small"></div>
           <h2 className="text-[2.875rem] text-[#f2f2f2] leading-[1.275]">
             <span className="">Check out my medals</span>
@@ -269,7 +316,7 @@ const Landing: React.FC<LandingProps> = () => {
           <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
           <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
+          <div className="w-full h-[1px] bg-[#3c3c3c]"></div>
           <div className="spacer-small"></div>
           <h3 className="text-[1.75rem] text-[#f2f2f2] font-[regular]">
             Recent experiences
@@ -277,89 +324,124 @@ const Landing: React.FC<LandingProps> = () => {
           <div className="spacer-medium"></div>
           <div className="spacer-xs"></div>
           <div className="w-full flex justify-start gap-4">
-            <div className="flex flex-col items-center">
-              <div className="w-[14px] h-[14px] flex justify-center items-center bg-white rounded-[50%]"></div>
-              <div className="w-[1px] h-[80%] bg-[#919191]"></div>
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-full h-[15%] flex justify-center items-start">
+                <div className="w-[14px] h-[14px] flex justify-center items-center bg-gradient-to-b from-[#0FFF50] to-green-600 rounded-[50%]"></div>
+              </div>
+              <div className="w-[1px] h-[85%] bg-[#3f3f3f]"></div>
             </div>
             <div className="w-[100%] flex flex-col items-start gap-2">
-              <div className="text-[14px] text-white tracking-wide">
-                February 22, 2025
+              <div className="text-white text-[14px] leading-none tracking-wide pb-[8px]">
+                July 2024 - Present
               </div>
-              <div className="text-[26px] text-white">
+
+              <div className="text-[24px] text-white">
                 Software Engineer at GALATIC Events Corp.
               </div>
 
-              <div className="text-[16px] text-[#919191] light-sweep">
-                &#9864; Leads development and management of PAGCOR's online
-                gaming platforms (e.g., LakiWin, OCMS),utilizing Vue.js/Nuxt.js,
-                Storybook.js, Pug.js, Cypress, and Jest.
-              </div>
-
-              <div className="text-[16px] text-[#919191] light-sweep">
-                &#9864; Guides the team in reviewing more than 26 pull requests,
-                delivering valuable feedback that significantly enhanced code
-                quality and maintainability compared to earlier practices.
-              </div>
-
-              <div className="text-[16px] text-[#919191] light-sweep">
-                &#9864; Chosen as one of the key engineers to collaborate with
-                international developers on a major large scale project focused
-                on back-office systems.
-              </div>
-            </div>
-          </div>
-          <div className="spacer-medium"></div>
-          <div className="w-full flex justify-start gap-4">
-            <div className="flex flex-col items-center">
-              <div className="w-[14px] h-[14px] flex justify-center items-center bg-white rounded-[50%]"></div>
-              <div className="w-[1px] h-[80%] bg-[#919191]"></div>
-            </div>
-            <div className="w-[100%] flex flex-col items-start gap-2">
-              <div className="text-[14px] text-white tracking-wide">
-                February 22, 2025
-              </div>
-              <div className="text-[26px] text-white">
-                Software Engineer at GALATIC Events Corp.
-              </div>
               <ul>
-                <li className="text-[16px] text-[#919191] light-sweep">
+                <li className="text-[16px] text-[#919191] light-sweep tracking-wide">
                   Leads development and management of PAGCOR's online gaming
                   platforms (e.g., LakiWin, OCMS),utilizing Vue.js/Nuxt.js,
                   Storybook.js, Pug.js, Cypress, and Jest.
                 </li>
+
                 <li className="text-[16px] text-[#919191] light-sweep">
-                  Get access to over 20+ pages including a dashboard layout,
-                  charts, kanban board, calendar, and pre-order E-commerce &
-                  Marketing pages.
+                  Guides the team in reviewing more than 26 pull requests,
+                  delivering valuable feedback that significantly enhanced code
+                  quality and maintainability compared to earlier practices.
+                </li>
+
+                <li className="text-[16px] text-[#919191] light-sweep">
+                  Chosen as one of the key engineers to collaborate with
+                  international developers on a major large scale project
+                  focused on back-office systems.
                 </li>
               </ul>
             </div>
           </div>
           <div className="spacer-medium"></div>
           <div className="w-full flex justify-start gap-4">
-            <div className="flex flex-col items-center">
-              <div className="w-[14px] h-[14px] flex justify-center items-center bg-white rounded-[50%]"></div>
-              <div className="w-[1px] h-[80%] bg-[#919191]"></div>
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-full h-[15%] flex justify-center items-start">
+                <div className="w-[14px] h-[14px] flex justify-center items-center bg-gradient-to-b from-white to-[#919191] rounded-[50%]"></div>
+              </div>
+              <div className="w-[1px] h-[85%] bg-[#3f3f3f]"></div>
             </div>
             <div className="w-[100%] flex flex-col items-start gap-2">
-              <div className="text-[14px] text-white tracking-wide">
-                February 22, 2025
+              <div className="text-white text-[14px] leading-none tracking-wide pb-[8px]">
+                January 2024 - July 2024
               </div>
-              <div className="text-[26px] text-white">
-                Application UI code in Tailwind CSS
+
+              <div className="text-[24px] text-white">
+                Full Stack Developer at Pamantasan ng Lungsod ng Valenzuela
               </div>
-              <div className="text-[16px] text-[#919191] light-sweep">
-                Get access to over 20+ pages including a dashboard layout,
-                charts, kanban board, calendar, and pre-order E-commerce &
-                Marketing pages.
+
+              <ul>
+                <li className="text-[16px] text-[#919191] light-sweep tracking-wide">
+                  Developed a web application that successfully managed up to
+                  12,000 student affairs records and processed more than 7,000
+                  students’ cases and appeals at Pamantasan ng Lungsod ng
+                  Valenzuela.
+                </li>
+
+                <li className="text-[16px] text-[#919191] light-sweep">
+                  Guides the team in reviewing more than 26 pull requests,
+                  delivering valuable feedback that significantly enhanced code
+                  quality and maintainability compared to earlier practices.
+                </li>
+
+                <li className="text-[16px] text-[#919191] light-sweep">
+                  Chosen as one of the key engineers to collaborate with
+                  international developers on a major large scale project
+                  focused on back-office systems.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="spacer-medium"></div>
+          <div className="w-full flex justify-start gap-4">
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-full h-[15%] flex justify-center items-start">
+                <div className="w-[14px] h-[14px] flex justify-center items-center bg-gradient-to-b from-white to-[#919191] rounded-[50%]"></div>
               </div>
+              <div className="w-[1px] h-[85%] bg-[#3f3f3f]"></div>
+            </div>
+            <div className="w-[100%] flex flex-col items-start gap-2">
+              <div className="text-white text-[14px] leading-none tracking-wide pb-[8px]">
+                March 2023 - December 2023
+              </div>
+
+              <div className="text-[24px] text-white">
+                Junior Web Developer at Asia Pacific Digital
+              </div>
+
+              <ul>
+                <li className="text-[16px] text-[#919191] light-sweep tracking-wide">
+                  Leads development and management of PAGCOR's online gaming
+                  platforms (e.g., LakiWin, OCMS),utilizing Vue.js/Nuxt.js,
+                  Storybook.js, Pug.js, Cypress, and Jest.
+                </li>
+
+                <li className="text-[16px] text-[#919191] light-sweep">
+                  Guides the team in reviewing more than 26 pull requests,
+                  delivering valuable feedback that significantly enhanced code
+                  quality and maintainability compared to earlier practices.
+                </li>
+
+                <li className="text-[16px] text-[#919191] light-sweep">
+                  Chosen as one of the key engineers to collaborate with
+                  international developers on a major large scale project
+                  focused on back-office systems.
+                </li>
+              </ul>
             </div>
           </div>
           <div className="spacer-xs"></div>
-          <div className="spacer-small"></div>
+          <div className="spacer-large"></div>
         </div>
       </section>
-      <section id="certifications" className="bg-[#282828]">
+      <section id="certifications" className="bg-[#282828]/50">
         <div className="max-w-[86.8125rem] px-[1.25rem] mx-auto">
           <div className="spacer-large"></div>
           <div className="text-[#f2f2f2]">Badges and Certifications</div>
@@ -420,7 +502,7 @@ const Landing: React.FC<LandingProps> = () => {
                     className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
                   />
                 </div>
-                <div className="relative z-20 bg-[#282828]">
+                <div className="relative z-20">
                   <div className="spacer-small"></div>
                   <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
                     <span>June 27, 2024</span>
@@ -1181,4 +1263,4 @@ const Landing: React.FC<LandingProps> = () => {
   );
 };
 
-export default Landing;
+export default Home;
