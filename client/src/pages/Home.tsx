@@ -59,7 +59,15 @@ import mlacproj from '../assets/images/mlacproj.png';
 import tcmcert from '../assets/images/tcmcert.png';
 import webdev from '../assets/images/webdev.jpg';
 import github from '../assets/images/github.svg';
-
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaRegCopyright,
+  FaRegEnvelope,
+} from 'react-icons/fa6';
 import { Timeline } from 'flowbite-react';
 import { Button } from 'flowbite-react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
@@ -1259,6 +1267,57 @@ const Home: React.FC<Home> = () => {
           </Swiper>
         </div>
       </section> */}
+      <footer id="footer" className="bg-[#282828]/50">
+        <div className="w-full flex justify-between items-center bg-transparent">
+          <div
+            style={{ clipPath: 'polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%)' }}
+            className="w-[33%] py-[60px] bg-[#efefef]"
+          ></div>
+          <div
+            style={{
+              clipPath: 'polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            }}
+            className="w-[33%] py-[60px] bg-[#efefef]"
+          ></div>
+        </div>
+
+        <div className="bg-[#efefef]">
+          <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
+            <div className="w-full flex justify-between items-center z-20 relative">
+              <div className="flex items-center gap-2">
+                <span className="text-[18px] text-[#282828]">
+                  Kludy Ramirez
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-[18px] text-[#282828]">
+                  Kludy Ramirez
+                </span>
+              </div>
+            </div>
+
+            <div className="spacer-small"></div>
+            <div className="w-full h-[1px] bg-gray-300"></div>
+            <div className="spacer-small"></div>
+            <div className="w-full flex justify-between items-center">
+              <div className="flex items-center gap-2">
+                <FaRegCopyright size={20} className="" />
+                <span className="text-[18px] text-[#282828] mt-1">
+                  All rights reserved.
+                </span>
+              </div>
+              <div className="flex items-center gap-4 text-[#484848]">
+                <FaFacebook size={28} className="" />
+                <FaInstagram size={28} className="" />
+                <FaLinkedin size={28} className="" />
+                <FaRegEnvelope size={28} className="" />
+                <FaGithub size={28} className="" />
+              </div>
+            </div>
+            <div className="spacer-large"></div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 };
