@@ -124,6 +124,19 @@
   animation: sweep 2.5s ease-in infinite;
 }
 
+.footer-sweep {
+  display: inline-block;
+  width: 33%;
+  background: rgba(0, 0, 0, 0.4) -webkit-linear-gradient(
+      left,
+      rgba(0, 0, 0, 0.4),
+      #111
+    ) no-repeat 0 0 / 60px;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(239, 239, 239, 1);
+  animation: sweep 2.5s ease-in infinite;
+}
+
 @keyframes sweep {
   0% {
     background-position: 0 0;
@@ -213,4 +226,3 @@
 .reverse-btn:active {
   transform: scale(0.9);
 }
-

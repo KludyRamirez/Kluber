@@ -29,10 +29,10 @@ const Navbar: React.FC<NavbarProps> = ({
       <div
         className={`w-[100%] flex justify-center items-center fixed z-30 transition-all duration-200 ease-in ${
           isBlogsSectionActive
-            ? 'bg-[#101010] text-[#f2f2f2]' // If Blogs section is active
+            ? 'bg-[#101010] text-[#f2f2f2]'
             : isExperiencesSectionActive
-            ? 'bg-[#efefef] text-[#101010]' // If Experiences section is active
-            : 'bg-transparent text-[#f2f2f2]' // Default if neither is active
+            ? 'bg-[#efefef] text-[#101010]'
+            : 'bg-transparent text-[#f2f2f2]'
         }`}
       >
         <div

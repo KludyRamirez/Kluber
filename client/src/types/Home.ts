@@ -1,4 +1,4 @@
-export interface LandingProps {
+export interface Home {
   title: string;
   color?: string;
 }

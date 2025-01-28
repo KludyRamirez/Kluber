@@ -6,16 +6,12 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import microsoft from '../assets/images/microsoft.svg';
+import opswat from '../assets/images/opswat.svg';
 import oracle from '../assets/images/oracle.svg';
-import oraclenw from '../assets/images/oracle-nw.svg';
-import aviatrix from '../assets/images/aviatrix.svg';
-import google from '../assets/images/google.svg';
 import coursera from '../assets/images/coursera.svg';
 import codecademy from '../assets/images/codecademy.svg';
 import azure from '../assets/images/azure.svg';
 import appbrewery from '../assets/images/appbrewery.svg';
-import dots from '../assets/images/dots.webp';
-import dotunder from '../assets/images/dotunder.svg';
 import sc900 from '../assets/images/sc900.png';
 import ociaipro from '../assets/images/ociaipro.png';
 import ociai from '../assets/images/ociai.png';
@@ -37,7 +33,6 @@ import ofsabadge from '../assets/images/ofsabadge.svg';
 import ofsabadgecolor from '../assets/images/ofsabadgecolor.svg';
 import icipbadge from '../assets/images/icipbadge.svg';
 import icipbadgecolor from '../assets/images/icipbadgecolor.svg';
-import opswatnw from '../assets/images/opswat-nw.svg';
 import cyberbadge from '../assets/images/cyberbadge.svg';
 import cyberbadgecolor from '../assets/images/cyberbadgecolor.svg';
 import python1badge from '../assets/images/python1badge.svg';
@@ -50,17 +45,25 @@ import js2badge from '../assets/images/js2badge.svg';
 import js2badgecolor from '../assets/images/js2badgecolor.svg';
 import acebadge from '../assets/images/acebadge.svg';
 import acebadgecolor from '../assets/images/acebadgecolor.svg';
-import cisconw from '../assets/images/cisco-nw.svg';
-import microsoftnw from '../assets/images/microsoft-nw.svg';
 import aviatrixcert from '../assets/images/aviatrixcert.png';
-import skillfrontbadge from '../assets/images/skillfrontbadge.svg';
+import icipcert from '../assets/images/icipcert.png';
+import ofsacert from '../assets/images/ofsacert.png';
+import reactcert from '../assets/images/reactcert.jpg';
+import completecybercert from '../assets/images/completecybercert.jpg';
+import learnjavascriptcoursecert from '../assets/images/learnjavascriptcoursecert.png';
 import plvosaproj from '../assets/images/plvosaproj.png';
 import mlacproj from '../assets/images/mlacproj.png';
 import tcmcert from '../assets/images/tcmcert.png';
 import webdev from '../assets/images/webdev.jpg';
-import github from '../assets/images/github.svg';
+import bitbucket from '../assets/images/bitbucket.svg';
+import klubbrlogo from '../assets/images/klubbrlogo.svg';
+import StarsCanvas from '../components/Background/StarBackground';
+
 import {
-  FaEnvelope,
+  FaAnglesUp,
+  FaAngleUp,
+  FaArrowUp,
+  FaCaretUp,
   FaFacebook,
   FaGithub,
   FaInstagram,
@@ -68,11 +71,6 @@ import {
   FaRegCopyright,
   FaRegEnvelope,
 } from 'react-icons/fa6';
-import { Timeline } from 'flowbite-react';
-import { Button } from 'flowbite-react';
-import { HiArrowNarrowRight } from 'react-icons/hi';
-import { HiCalendar } from 'react-icons/hi';
-import StarsCanvas from '../components/Background/StarBackground';
 
 const Home: React.FC<Home> = () => {
   const [isBlogsSectionActive, setIsBlogsSectionActive] = useState(false);
@@ -97,21 +95,24 @@ const Home: React.FC<Home> = () => {
       { threshold: 0.4 }
     );
 
-    if (blogsSectionRef.current) {
-      blogsObserver.observe(blogsSectionRef.current);
+    const blogsSection = blogsSectionRef.current;
+    const experiencesSection = experiencesSectionRef.current;
+
+    if (blogsSection) {
+      blogsObserver.observe(blogsSection);
     }
 
-    if (experiencesSectionRef.current) {
-      experiencesObserver.observe(experiencesSectionRef.current);
+    if (experiencesSection) {
+      experiencesObserver.observe(experiencesSection);
     }
 
     return () => {
-      if (blogsSectionRef.current) {
-        blogsObserver.unobserve(blogsSectionRef.current);
+      if (blogsSection) {
+        blogsObserver.unobserve(blogsSection);
       }
 
-      if (experiencesSectionRef.current) {
-        experiencesObserver.unobserve(experiencesSectionRef.current);
+      if (experiencesSection) {
+        experiencesObserver.unobserve(experiencesSection);
       }
     };
   }, []);
@@ -195,16 +196,19 @@ const Home: React.FC<Home> = () => {
               <img src={codecademy} />
             </SwiperSlide>
             <SwiperSlide className="">
+              <img src={bitbucket} />
+            </SwiperSlide>
+            <SwiperSlide className="">
               <img src={coursera} />
             </SwiperSlide>
             <SwiperSlide className="">
-              <img src={google} />
+              <img src={opswat} />
             </SwiperSlide>
           </Swiper>
         </div>
         <div className="spacer-large"></div>
       </section>
-      <section id="blogs" ref={blogsSectionRef} className="bg-[#efefef]">
+      {/* <section id="blogs" ref={blogsSectionRef} className="bg-[#efefef]">
         <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
           <div className="spacer-large"></div>
           <div className="text-[#282828]">Blogs</div>
@@ -306,7 +310,7 @@ const Home: React.FC<Home> = () => {
           </Swiper>
           <div className="spacer-large"></div>
         </div>
-      </section>
+      </section> */}
       <section id="experiences" ref={experiencesSectionRef}>
         <div className="max-w-[86.8125rem] px-[1.25rem] mx-auto">
           <div className="spacer-large"></div>
@@ -449,7 +453,7 @@ const Home: React.FC<Home> = () => {
           <div className="spacer-large"></div>
         </div>
       </section>
-      <section id="certifications" className="bg-[#282828]/50">
+      <section id="bc" className="bg-[#282828]/70">
         <div className="max-w-[86.8125rem] px-[1.25rem] mx-auto">
           <div className="spacer-large"></div>
           <div className="text-[#f2f2f2]">Badges and Certifications</div>
@@ -460,7 +464,7 @@ const Home: React.FC<Home> = () => {
             <span className="">Check out my medals</span>
             <br />
             <span className="text-[#919191] font-[regular] light-sweep">
-              These are proof of commitment
+              These are proofs of commitment
             </span>
           </h2>
           <div className="spacer-medium"></div>
@@ -476,10 +480,10 @@ const Home: React.FC<Home> = () => {
 
           <Swiper
             spaceBetween="20"
-            // autoplay={{
-            //   delay: 2000,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 1400,
+              disableOnInteraction: false,
+            }}
             loop={true}
             breakpoints={{
               639: {
@@ -537,7 +541,7 @@ const Home: React.FC<Home> = () => {
                     className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
                   />
                 </div>
-                <div className="relative z-20 bg-[#282828]">
+                <div className="relative z-20">
                   <div className="spacer-small"></div>
                   <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
                     <span>June 10, 2024</span>
@@ -564,7 +568,7 @@ const Home: React.FC<Home> = () => {
                     className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
                   />
                 </div>
-                <div className="relative z-20 bg-[#282828]">
+                <div className="relative z-20">
                   <div className="spacer-small"></div>
                   <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
                     <span>June 09, 2023</span>
@@ -591,7 +595,7 @@ const Home: React.FC<Home> = () => {
                     className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
                   />
                 </div>
-                <div className="relative z-20 bg-[#282828]">
+                <div className="relative z-20">
                   <div className="spacer-small"></div>
                   <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
                     <span>June 08, 2023</span>
@@ -618,7 +622,7 @@ const Home: React.FC<Home> = () => {
                     className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
                   />
                 </div>
-                <div className="relative z-20 bg-[#282828]">
+                <div className="relative z-20">
                   <div className="spacer-small"></div>
                   <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
                     <span>October 11, 2023</span>
@@ -645,7 +649,7 @@ const Home: React.FC<Home> = () => {
                     className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
                   />
                 </div>
-                <div className="relative z-20 bg-[#282828]">
+                <div className="relative z-20">
                   <div className="spacer-small"></div>
                   <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
                     <span>June 22, 2024</span>
@@ -671,7 +675,7 @@ const Home: React.FC<Home> = () => {
                     className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
                   />
                 </div>
-                <div className="relative z-20 bg-[#282828]">
+                <div className="relative z-20">
                   <div className="spacer-small"></div>
                   <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
                     <span>June 25, 2024</span>
@@ -698,7 +702,7 @@ const Home: React.FC<Home> = () => {
                     className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
                   />
                 </div>
-                <div className="relative z-20 bg-[#282828]">
+                <div className="relative z-20">
                   <div className="spacer-small"></div>
                   <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
                     <span>June 25, 2024</span>
@@ -724,7 +728,7 @@ const Home: React.FC<Home> = () => {
                     className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
                   />
                 </div>
-                <div className="relative z-20 bg-[#282828]">
+                <div className="relative z-20">
                   <div className="spacer-small"></div>
                   <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
                     <span>June 24, 2024</span>
@@ -750,7 +754,7 @@ const Home: React.FC<Home> = () => {
                     className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
                   />
                 </div>
-                <div className="relative z-20 bg-[#282828]">
+                <div className="relative z-20">
                   <div className="spacer-small"></div>
                   <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
                     <span>June 11, 2024</span>
@@ -776,7 +780,7 @@ const Home: React.FC<Home> = () => {
                     className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
                   />
                 </div>
-                <div className="relative z-20 bg-[#282828]">
+                <div className="relative z-20">
                   <div className="spacer-small"></div>
                   <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
                     <span>June 11, 2024</span>
@@ -800,7 +804,7 @@ const Home: React.FC<Home> = () => {
                     className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
                   />
                 </div>
-                <div className="relative z-20 bg-[#282828]">
+                <div className="relative z-20">
                   <div className="spacer-small"></div>
                   <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
                     <span>June 11, 2024</span>
@@ -824,7 +828,7 @@ const Home: React.FC<Home> = () => {
                     className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
                   />
                 </div>
-                <div className="relative z-20 bg-[#282828]">
+                <div className="relative z-20">
                   <div className="spacer-small"></div>
                   <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
                     <span>June 14, 2024</span>
@@ -848,7 +852,7 @@ const Home: React.FC<Home> = () => {
                     className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in hidden group-hover:block hover:aspect-[1/1]"
                   />
                 </div>
-                <div className="relative z-20 bg-[#282828]">
+                <div className="relative z-20">
                   <div className="spacer-small"></div>
                   <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
                     <span>June 14, 2024</span>
@@ -1045,6 +1049,94 @@ const Home: React.FC<Home> = () => {
                 <div className="text-[#f2f2f2]">
                   Multicloud Network Associate
                 </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2">
+                <img
+                  src={icipcert}
+                  className="cursor-pointer aspect-[3/2] grayscale hover:aspect-[1/1] hover:grayscale-0 z-20 transition-hover duration-[400ms] ease-in"
+                />
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                  <span>June 22, 2024</span>
+                  <span>|</span>
+                  <span>by OPSWAT Academy</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#f2f2f2]">
+                  Introduction to Critical Infrastructure Protection (ICIP)
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2">
+                <img
+                  src={ofsacert}
+                  className="cursor-pointer aspect-[3/2] grayscale hover:aspect-[1/1] hover:grayscale-0 z-20 transition-hover duration-[400ms] ease-in"
+                />
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                  <span>June 25, 2024</span>
+                  <span>|</span>
+                  <span>by OPSWAT Academy</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#f2f2f2]">
+                  OPSWAT File Security Associate (OFSA)
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2">
+                <img
+                  src={reactcert}
+                  className="cursor-pointer aspect-[3/2] grayscale hover:aspect-[1/1] hover:grayscale-0 z-20 transition-hover duration-[400ms] ease-in"
+                />
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                  <span>July 29, 2023</span>
+                  <span>|</span>
+                  <span>by Academind and Udemy</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#f2f2f2]">
+                  React - The Complete Guide 2025 (incl. Next.js, Redux)
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2">
+                <img
+                  src={completecybercert}
+                  className="cursor-pointer aspect-[3/2] grayscale hover:aspect-[1/1] hover:grayscale-0 z-20 transition-hover duration-[400ms] ease-in"
+                />
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                  <span>July 28, 2024</span>
+                  <span>|</span>
+                  <span>by Nathan House and Udemy</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#f2f2f2]">
+                  The Complete Cyber Security Course : Hackers Exposed
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2">
+                <img
+                  src={learnjavascriptcoursecert}
+                  className="cursor-pointer aspect-[3/2] grayscale hover:aspect-[1/1] hover:grayscale-0 z-20 transition-hover duration-[400ms] ease-in"
+                />
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-300">
+                  <span>August 1, 2024</span>
+                  <span>|</span>
+                  <span>by Codecademy</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#f2f2f2]">Learn JavaScript</div>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -1267,51 +1359,66 @@ const Home: React.FC<Home> = () => {
           </Swiper>
         </div>
       </section> */}
-      <footer id="footer" className="bg-[#282828]/50">
-        <div className="w-full flex justify-between items-center bg-transparent">
+      <footer id="footer" className="bg-[#282828]/70">
+        <div className="w-full flex justify-between items-center bg-transparent sm:hidden">
           <div
             style={{ clipPath: 'polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%)' }}
-            className="w-[33%] py-[60px] bg-[#efefef]"
+            className="w-[33%] py-[60px] sm:py-[30px] bg-[#efefef]"
           ></div>
           <div
             style={{
               clipPath: 'polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)',
             }}
-            className="w-[33%] py-[60px] bg-[#efefef]"
+            className="w-[33%] py-[60px] sm:py-[30px] bg-[#efefef]"
           ></div>
         </div>
 
-        <div className="bg-[#efefef]">
-          <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
-            <div className="w-full flex justify-between items-center z-20 relative">
-              <div className="flex items-center gap-2">
-                <span className="text-[18px] text-[#282828]">
-                  Kludy Ramirez
+        <div className="w-full bg-[#efefef]">
+          <div className="max-w-[86.8125rem] px-[1.25rem] mx-auto">
+            <div className="spacer-small hidden sm:block"></div>
+            <div className="w-full flex justify-between items-center sm:flex-col sm:justify-start sm:gap-4 sm:pt-4">
+              <div className="flex items-center">
+                <span className="text-[16px] text-[#282828] leading-none">
+                  Klubbr
                 </span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-[18px] text-[#282828]">
-                  Kludy Ramirez
-                </span>
+              <div className="flex items-center gap-2 cursor-pointer hover:underline">
+                <FaAnglesUp size={14} className="text-[#282828] -mt-[4px]" />
+                <span className="text-[16px] text-[#282828]">Back to top</span>
               </div>
             </div>
 
             <div className="spacer-small"></div>
             <div className="w-full h-[1px] bg-gray-300"></div>
             <div className="spacer-small"></div>
-            <div className="w-full flex justify-between items-center">
+            <div className="w-full flex justify-between items-center sm:flex-col sm:justify-start sm:gap-4">
               <div className="flex items-center gap-2">
-                <FaRegCopyright size={20} className="" />
-                <span className="text-[18px] text-[#282828] mt-1">
+                <FaRegCopyright size={22} className="text-[#282828]" />
+                <span className="text-[16px] text-[#282828] mt-1">
                   All rights reserved.
                 </span>
               </div>
-              <div className="flex items-center gap-4 text-[#484848]">
-                <FaFacebook size={28} className="" />
-                <FaInstagram size={28} className="" />
-                <FaLinkedin size={28} className="" />
-                <FaRegEnvelope size={28} className="" />
-                <FaGithub size={28} className="" />
+              <div className="flex items-center gap-3">
+                <FaFacebook
+                  size={24}
+                  className="text-[#505050] hover:text-[#282828] cursor-pointer"
+                />
+                <FaInstagram
+                  size={24}
+                  className="text-[#505050] hover:text-[#282828] cursor-pointer"
+                />
+                <FaLinkedin
+                  size={24}
+                  className="text-[#505050] hover:text-[#282828] cursor-pointer"
+                />
+                <FaRegEnvelope
+                  size={24}
+                  className="text-[#505050] hover:text-[#282828] cursor-pointer"
+                />
+                <FaGithub
+                  size={24}
+                  className="text-[#505050] hover:text-[#282828] cursor-pointer"
+                />
               </div>
             </div>
             <div className="spacer-large"></div>
