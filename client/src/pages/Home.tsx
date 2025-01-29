@@ -61,9 +61,6 @@ import StarsCanvas from '../components/Background/StarBackground';
 
 import {
   FaAnglesUp,
-  FaAngleUp,
-  FaArrowUp,
-  FaCaretUp,
   FaFacebook,
   FaGithub,
   FaInstagram,
@@ -72,7 +69,7 @@ import {
   FaRegEnvelope,
 } from 'react-icons/fa6';
 
-const Home: React.FC<Home> = () => {
+const HomePage: React.FC<Home> = () => {
   const [isBlogsSectionActive, setIsBlogsSectionActive] = useState(false);
   const [isExperiencesSectionActive, setIsExperiencesSectionActive] =
     useState(false);
@@ -343,7 +340,7 @@ const Home: React.FC<Home> = () => {
               <div className="w-[1px] h-[85%] bg-[#3f3f3f]"></div>
             </div>
             <div className="w-[100%] flex flex-col items-start gap-2">
-              <div className="text-white text-[14px] leading-none tracking-wide pb-[8px]">
+              <div className="text-white text-[14px] leading-none tracking-wide pb-[8px] mt-[1px]">
                 July 2024 - Present
               </div>
 
@@ -381,7 +378,7 @@ const Home: React.FC<Home> = () => {
               <div className="w-[1px] h-[85%] bg-[#3f3f3f]"></div>
             </div>
             <div className="w-[100%] flex flex-col items-start gap-2">
-              <div className="text-white text-[14px] leading-none tracking-wide pb-[8px]">
+              <div className="text-white text-[14px] leading-none tracking-wide pb-[8px] mt-[1px]">
                 January 2024 - July 2024
               </div>
 
@@ -420,7 +417,7 @@ const Home: React.FC<Home> = () => {
               <div className="w-[1px] h-[85%] bg-[#3f3f3f]"></div>
             </div>
             <div className="w-[100%] flex flex-col items-start gap-2">
-              <div className="text-white text-[14px] leading-none tracking-wide pb-[8px]">
+              <div className="text-white text-[14px] leading-none tracking-wide pb-[8px] mt-[1px]">
                 March 2023 - December 2023
               </div>
 
@@ -480,10 +477,10 @@ const Home: React.FC<Home> = () => {
 
           <Swiper
             spaceBetween="20"
-            autoplay={{
-              delay: 1400,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 1400,
+            //   disableOnInteraction: false,
+            // }}
             loop={true}
             breakpoints={{
               639: {
@@ -528,6 +525,21 @@ const Home: React.FC<Home> = () => {
                   </div>
                 </div>
               </div>
+              <div className="spacer-xs"></div>
+              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#FFD700]/10 hover:bg-[#FFD700] rounded-[32px] text-[14px] text-yellow-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#FFD700] rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                    Certification
+                  </div>
+                </div>
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
+                    AI / ML
+                  </div>
+                </div>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full h-full p-2 relative group">
@@ -552,6 +564,21 @@ const Home: React.FC<Home> = () => {
                   <div className="text-[#f2f2f2]">
                     Oracle Cloud Infrastructure 2023 AI Certified Foundations
                     Associate
+                  </div>
+                </div>
+              </div>
+              <div className="spacer-xs"></div>
+              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#FFD700]/10 hover:bg-[#FFD700] rounded-[32px] text-[14px] text-yellow-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#FFD700] rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                    Certification
+                  </div>
+                </div>
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
+                    AI / ML
                   </div>
                 </div>
               </div>
@@ -582,6 +609,21 @@ const Home: React.FC<Home> = () => {
                   </div>
                 </div>
               </div>
+              <div className="spacer-xs"></div>
+              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#FFD700]/10 hover:bg-[#FFD700] rounded-[32px] text-[14px] text-yellow-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#FFD700] rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                    Certification
+                  </div>
+                </div>
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
+                    Data
+                  </div>
+                </div>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full h-full p-2 relative group">
@@ -606,6 +648,21 @@ const Home: React.FC<Home> = () => {
                   <div className="text-[#f2f2f2]">
                     Oracle Cloud Infrastructure 2023 Certified Foundations
                     Associate
+                  </div>
+                </div>
+              </div>
+              <div className="spacer-xs"></div>
+              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#FFD700]/10 hover:bg-[#FFD700] rounded-[32px] text-[14px] text-yellow-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#FFD700] rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                    Certification
+                  </div>
+                </div>
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
+                    Cloud
                   </div>
                 </div>
               </div>
@@ -636,6 +693,21 @@ const Home: React.FC<Home> = () => {
                   </div>
                 </div>
               </div>
+              <div className="spacer-xs"></div>
+              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#FFD700]/10 hover:bg-[#FFD700] rounded-[32px] text-[14px] text-yellow-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#FFD700] rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                    Certification
+                  </div>
+                </div>
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
+                    Cybersecurity
+                  </div>
+                </div>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full h-full p-2 relative group">
@@ -659,6 +731,21 @@ const Home: React.FC<Home> = () => {
                   <div className="spacer-xs"></div>
                   <div className="text-[#f2f2f2]">
                     Practical Web Application Security and Testing
+                  </div>
+                </div>
+              </div>
+              <div className="spacer-xs"></div>
+              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#efefef]/10 hover:bg-[#efefef] rounded-[32px] text-[14px] text-[#efefef] gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#efefef] rounded-[50%] group-hover:bg-[#282828]/70"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                    Completion
+                  </div>
+                </div>
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
+                    Cybersecurity
                   </div>
                 </div>
               </div>
@@ -689,6 +776,21 @@ const Home: React.FC<Home> = () => {
                   </div>
                 </div>
               </div>
+              <div className="spacer-xs"></div>
+              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#FFD700]/10 hover:bg-[#FFD700] rounded-[32px] text-[14px] text-yellow-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#FFD700] rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                    Certification
+                  </div>
+                </div>
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
+                    Cybersecurity
+                  </div>
+                </div>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full h-full p-2 relative group">
@@ -712,6 +814,21 @@ const Home: React.FC<Home> = () => {
                   <div className="spacer-xs"></div>
                   <div className="text-[#f2f2f2]">
                     OPSWAT File Security Associate (OFSA)
+                  </div>
+                </div>
+              </div>
+              <div className="spacer-xs"></div>
+              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#FFD700]/10 hover:bg-[#FFD700] rounded-[32px] text-[14px] text-yellow-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#FFD700] rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                    Certification
+                  </div>
+                </div>
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
+                    Cybersecurity
                   </div>
                 </div>
               </div>
@@ -741,6 +858,21 @@ const Home: React.FC<Home> = () => {
                   </div>
                 </div>
               </div>
+              <div className="spacer-xs"></div>
+              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#FFD700]/10 hover:bg-[#FFD700] rounded-[32px] text-[14px] text-yellow-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#FFD700] rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                    Certification
+                  </div>
+                </div>
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
+                    Cloud
+                  </div>
+                </div>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full h-full p-2 relative group">
@@ -764,6 +896,21 @@ const Home: React.FC<Home> = () => {
                   <div className="spacer-xs"></div>
                   <div className="text-[#f2f2f2]">
                     Introduction to Cybersecurity
+                  </div>
+                </div>
+              </div>
+              <div className="spacer-xs"></div>
+              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#efefef]/10 hover:bg-[#efefef] rounded-[32px] text-[14px] text-[#efefef] gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#efefef] rounded-[50%] group-hover:bg-[#282828]/70"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                    Completion
+                  </div>
+                </div>
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
+                    Cybersecurity
                   </div>
                 </div>
               </div>
@@ -791,6 +938,21 @@ const Home: React.FC<Home> = () => {
                   <div className="text-[#f2f2f2]">JavaScript Essentials 1</div>
                 </div>
               </div>
+              <div className="spacer-xs"></div>
+              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#efefef]/10 hover:bg-[#efefef] rounded-[32px] text-[14px] text-[#efefef] gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#efefef] rounded-[50%] group-hover:bg-[#282828]/70"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                    Completion
+                  </div>
+                </div>
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
+                    Development
+                  </div>
+                </div>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full h-full p-2 relative group">
@@ -813,6 +975,21 @@ const Home: React.FC<Home> = () => {
                   </div>
                   <div className="spacer-xs"></div>
                   <div className="text-[#f2f2f2]">JavaScript Essentials 2</div>
+                </div>
+              </div>
+              <div className="spacer-xs"></div>
+              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#efefef]/10 hover:bg-[#efefef] rounded-[32px] text-[14px] text-[#efefef] gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#efefef] rounded-[50%] group-hover:bg-[#282828]/70"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                    Completion
+                  </div>
+                </div>
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
+                    Development
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -839,6 +1016,21 @@ const Home: React.FC<Home> = () => {
                   <div className="text-[#f2f2f2]">Python Essentials 1</div>
                 </div>
               </div>
+              <div className="spacer-xs"></div>
+              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#efefef]/10 hover:bg-[#efefef] rounded-[32px] text-[14px] text-[#efefef] gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#efefef] rounded-[50%] group-hover:bg-[#282828]/70"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                    Completion
+                  </div>
+                </div>
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
+                    Development
+                  </div>
+                </div>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full h-full p-2 relative group">
@@ -861,6 +1053,21 @@ const Home: React.FC<Home> = () => {
                   </div>
                   <div className="spacer-xs"></div>
                   <div className="text-[#f2f2f2]">Python Essentials 2</div>
+                </div>
+              </div>
+              <div className="spacer-xs"></div>
+              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#efefef]/10 hover:bg-[#efefef] rounded-[32px] text-[14px] text-[#efefef] gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#efefef] rounded-[50%] group-hover:bg-[#282828]/70"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                    Completion
+                  </div>
+                </div>
+                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
+                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
+                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
+                    Development
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -1378,7 +1585,7 @@ const Home: React.FC<Home> = () => {
             <div className="spacer-small hidden sm:block"></div>
             <div className="w-full flex justify-between items-center sm:flex-col sm:justify-start sm:gap-4 sm:pt-4">
               <div className="flex items-center">
-                <span className="text-[16px] text-[#282828] leading-none">
+                <span className="text-[16px] text-[#282828] font-[semi-bold] leading-none">
                   Klubbr
                 </span>
               </div>
@@ -1393,10 +1600,12 @@ const Home: React.FC<Home> = () => {
             <div className="spacer-small"></div>
             <div className="w-full flex justify-between items-center sm:flex-col sm:justify-start sm:gap-4">
               <div className="flex items-center gap-2">
-                <FaRegCopyright size={22} className="text-[#282828]" />
-                <span className="text-[16px] text-[#282828] mt-1">
-                  All rights reserved.
-                </span>
+                <div className="text-[16px] text-[#282828] mt-1">
+                  Made by{' '}
+                  <span className="font-[semi-bold]">
+                    Kludy Ramirez &#10022;
+                  </span>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <FaFacebook
@@ -1429,4 +1638,4 @@ const Home: React.FC<Home> = () => {
   );
 };
 
-export default Home;
+export default HomePage;
