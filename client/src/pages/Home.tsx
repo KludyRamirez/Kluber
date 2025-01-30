@@ -104,9 +104,7 @@ const HomePage: React.FC<Home> = () => {
   return (
     <>
       <StarsCanvas />
-      <Navbar
-        isHeroSectionActive={isHeroSectionActive}
-      />
+      <Navbar isHeroSectionActive={isHeroSectionActive} />
       <section id="hero" className="relative" ref={heroSectionRef}>
         <div className="max-w-[86.8125rem] px-[1.25rem] mx-auto relative z-20">
           <div className="spacer-large"></div>
@@ -897,7 +895,7 @@ const HomePage: React.FC<Home> = () => {
                       Security
                     </div>
                   </div>
-                  <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#F88379] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#F88379] rounded-[32px] text-[14px] text-gray-300 gap-2">
                     <FaCoins
                       size={14}
                       className="-mt-[2px] group-hover:text-[#282828]"
@@ -947,7 +945,7 @@ const HomePage: React.FC<Home> = () => {
                       Cloud
                     </div>
                   </div>
-                  <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#F88379] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#F88379] rounded-[32px] text-[14px] text-gray-300 gap-2">
                     <FaCoins
                       size={14}
                       className="-mt-[2px] group-hover:text-[#282828]"
@@ -997,7 +995,7 @@ const HomePage: React.FC<Home> = () => {
                       Development
                     </div>
                   </div>
-                  <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Free
@@ -1042,7 +1040,7 @@ const HomePage: React.FC<Home> = () => {
                       Development
                     </div>
                   </div>
-                  <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Free
@@ -1087,7 +1085,7 @@ const HomePage: React.FC<Home> = () => {
                       Development
                     </div>
                   </div>
-                  <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Free
@@ -1132,7 +1130,7 @@ const HomePage: React.FC<Home> = () => {
                       Development
                     </div>
                   </div>
-                  <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Free
@@ -1177,7 +1175,7 @@ const HomePage: React.FC<Home> = () => {
                       Development
                     </div>
                   </div>
-                  <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Free
@@ -1475,10 +1473,7 @@ const HomePage: React.FC<Home> = () => {
                     </div>
                   </div>
                   <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <FaCode
-                      size={14}
-                      className="group-hover:text-[#282828]"
-                    />
+                    <FaCode size={14} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Development
                     </div>
@@ -1565,15 +1560,12 @@ const HomePage: React.FC<Home> = () => {
                     </div>
                   </div>
                   <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <FaCloud
-                      size={14}
-                      className="group-hover:text-[#282828]"
-                    />
+                    <FaCloud size={14} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Cloud
                     </div>
                   </div>
-                  <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#F88379] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#F88379] rounded-[32px] text-[14px] text-gray-300 gap-2">
                     <FaCoins
                       size={14}
                       className="-mt-[2px] group-hover:text-[#282828]"
@@ -1586,7 +1578,7 @@ const HomePage: React.FC<Home> = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full h-full p-2">
+              <div className="w-full h-full p-2 group">
                 <img
                   src={icipcert}
                   className="cursor-pointer aspect-[3/2] grayscale hover:aspect-[1/1] hover:grayscale-0 z-20 transition-hover duration-[400ms] ease-in"
@@ -1601,31 +1593,34 @@ const HomePage: React.FC<Home> = () => {
                 <div className="text-[#f2f2f2]">
                   Introduction to Critical Infrastructure Protection (ICIP)
                 </div>
-              </div>
-              <div className="spacer-xs"></div>
-              <div className="px-2 w-full flex flex-wrap justify-start items-start gap-2">
-                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#FFD700]/10 hover:bg-[#FFD700] rounded-[32px] text-[14px] text-yellow-500 gap-2">
-                  <div className="w-[10px] h-[10px] rounded-50 bg-[#FFD700] rounded-[50%] group-hover:bg-[#282828]"></div>
-                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                    Certification
+                <div className="spacer-small"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                    <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
+                    <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                      Certification
+                    </div>
                   </div>
-                </div>
-                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-blue-950 hover:bg-blue-700 rounded-[32px] text-[14px] text-blue-500 gap-2">
-                  <div className="w-[10px] h-[10px] rounded-50 bg-[#1F51FF] rounded-[50%] group-hover:bg-[#efefef]"></div>
-                  <div className="mt-[2px] tracking-wide group-hover:text-[#efefef]">
-                    Security
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                    <FaShieldHalved
+                      size={14}
+                      className="group-hover:text-[#282828]"
+                    />
+                    <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                      Security
+                    </div>
                   </div>
-                </div>
-                <div className="group cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#efefef]/10 hover:bg-[#efefef] rounded-[32px] text-[14px] text-[#efefef] gap-2">
-                  <div className="w-[10px] h-[10px] rounded-50 bg-[#efefef] rounded-[50%] group-hover:bg-[#282828]/70"></div>
-                  <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                    Free
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                    <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
+                    <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                      Free
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full h-full p-2">
+              <div className="w-full h-full p-2 group">
                 <img
                   src={ofsacert}
                   className="cursor-pointer aspect-[3/2] grayscale hover:aspect-[1/1] hover:grayscale-0 z-20 transition-hover duration-[400ms] ease-in"
@@ -1640,10 +1635,37 @@ const HomePage: React.FC<Home> = () => {
                 <div className="text-[#f2f2f2]">
                   OPSWAT File Security Associate (OFSA)
                 </div>
+                <div className="spacer-small"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                    <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
+                    <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                      Certification
+                    </div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                    <FaShieldHalved
+                      size={14}
+                      className="group-hover:text-[#282828]"
+                    />
+                    <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                      Security
+                    </div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#F88379] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                    <FaCoins
+                      size={14}
+                      className="-mt-[2px] group-hover:text-[#282828]"
+                    />
+                    <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                      Funded
+                    </div>
+                  </div>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full h-full p-2">
+              <div className="w-full h-full p-2 group">
                 <img
                   src={reactcert}
                   className="cursor-pointer aspect-[3/2] grayscale hover:aspect-[1/1] hover:grayscale-0 z-20 transition-hover duration-[400ms] ease-in"
@@ -1657,6 +1679,33 @@ const HomePage: React.FC<Home> = () => {
                 <div className="spacer-xs"></div>
                 <div className="text-[#f2f2f2]">
                   React - The Complete Guide 2025 (incl. Next.js, Redux)
+                </div>
+                <div className="spacer-small"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                    <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
+                    <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                      Certification
+                    </div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                    <FaShieldHalved
+                      size={14}
+                      className="group-hover:text-[#282828]"
+                    />
+                    <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                      Security
+                    </div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#F88379] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                    <FaCoins
+                      size={14}
+                      className="-mt-[2px] group-hover:text-[#282828]"
+                    />
+                    <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                      Funded
+                    </div>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>

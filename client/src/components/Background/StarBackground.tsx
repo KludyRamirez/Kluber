@@ -1,11 +1,10 @@
-import React, { useState, useRef, useEffect, Suspense } from 'react';
+import React, { useState, useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
 import * as random from 'maath/random';
 import { Points as ThreePoints } from 'three';
 
 const StarBackground: React.FC = (props) => {
-  const [color, setColor] = useState('red');
   const ref = useRef<ThreePoints>(null);
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(3000), { radius: 1.2 })
@@ -18,18 +17,6 @@ const StarBackground: React.FC = (props) => {
     }
   });
 
-  useEffect(() => {
-    const colors = ['white'];
-    let index = 0;
-
-    const interval = setInterval(() => {
-      index = (index + 1) % colors.length;
-      setColor(colors[index]);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points
@@ -41,7 +28,7 @@ const StarBackground: React.FC = (props) => {
       >
         <PointMaterial
           transparent
-          color={color}
+          color='white'
           size={0.002}
           sizeAttenuation={true}
           depthWrite={false}
