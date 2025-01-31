@@ -50,22 +50,25 @@ import icipcert from '../assets/images/icipcert.png';
 import ofsacert from '../assets/images/ofsacert.png';
 import reactcert from '../assets/images/reactcert.jpg';
 import completecybercert from '../assets/images/completecybercert.jpg';
-import learnjavascriptcoursecert from '../assets/images/learnjavascriptcoursecert.png';
 import plvosaproj from '../assets/images/plvosaproj.png';
 import mlacproj from '../assets/images/mlacproj.png';
+import bpiaiaproj from '../assets/images/bpiaiaproj.png';
+import aiaproj from '../assets/images/aiaproj.png';
+import aiathproj from '../assets/images/aiathproj.png';
 import tcmcert from '../assets/images/tcmcert.png';
 import webdev from '../assets/images/webdev.jpg';
 import bitbucket from '../assets/images/bitbucket.svg';
 import StarsCanvas from '../components/Background/StarBackground';
+import dotunder from '../assets/images/dotunder.svg';
 
 import {
   FaAnglesUp,
   FaCloud,
   FaCode,
-  FaCoins,
   FaDatabase,
   FaDollarSign,
   FaFacebook,
+  FaGift,
   FaGithub,
   FaInstagram,
   FaLinkedin,
@@ -434,6 +437,169 @@ const HomePage: React.FC<Home> = () => {
           <div className="spacer-large"></div>
         </div>
       </section>
+      <section id="projects" className="bg-[#efefef] relative">
+        <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
+          <div className="spacer-large"></div>
+          <div className="text-[#282828]">Projects</div>
+          <div className="spacer-small"></div>
+          <div className="w-full h-[1px] bg-gray-300"></div>
+          <div className="spacer-small"></div>
+          <h2 className="text-[2.875rem] text-[#282828] leading-[1.275]">
+            Check out my projects <br />
+            <span className="text-[#919191] font-[regular] black-sweep">
+              These works aspires to be best
+            </span>
+          </h2>
+          <div className="spacer-medium"></div>
+          <div className="spacer-small"></div>
+          <div className="spacer-small"></div>
+          <div className="w-full h-[1px] bg-gray-300"></div>
+          <div className="spacer-small"></div>
+          <h3 className="text-[1.75rem] text-[#282828] font-[regular]">
+            Recent projects
+          </h3>
+          <div className="spacer-medium"></div>
+          <div className="spacer-xs"></div>
+          <Swiper
+            spaceBetween="20"
+            slidesPerView={3}
+            // autoplay={{
+            //   delay: 1000,
+            //   disableOnInteraction: false,
+            // }}
+            loop={true}
+            modules={[Autoplay, Pagination]}
+            className="blogs-swiper"
+          >
+            <SwiperSlide className="">
+              <div className="w-full h-full p-2">
+                <img
+                  src={bpiaiaproj}
+                  className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in"
+                />
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
+                  <span>November 21, 2024</span>
+                  <span>|</span>
+                  <span>by Kludy Ramirez</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#282828]">
+                  BPI AIA official website: The site covers insurance plans, company info, wellness programs, and support.
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <div className="w-full h-full p-2">
+                <img
+                  src={aiaproj}
+                  className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in"
+                />
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
+                  <span>November 21, 2024</span>
+                  <span>|</span>
+                  <span>by Kludy Ramirez</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#282828]">
+                  AIA PH official website: The site provides insurance, company details, wellness, and support.
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <div className="w-full h-full p-2">
+                <img
+                  src={aiathproj}
+                  className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in"
+                />
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
+                  <span>November 21, 2024</span>
+                  <span>|</span>
+                  <span>by Kludy Ramirez</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#282828]">
+                  AIA TH official website: The site provides insurance, company details, wellness, and support.
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <div className="w-full h-full p-2">
+                <img
+                  src={plvosaproj}
+                  className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in"
+                />
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
+                  <span>November 21, 2024</span>
+                  <span>|</span>
+                  <span>by Kludy Ramirez</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#282828]">
+                  PLV OSA Reprimand Hub: A web-based digital hub where the
+                  pamantasan can handle student cases, offenses, and violations.
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2">
+                <img
+                  src={mlacproj}
+                  className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in"
+                />
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 21, 2024</span>
+                  <span>|</span>
+                  <span>by Kludy Ramirez</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#282828]">
+                  MLAC: A web-based application where parents of MLAC students
+                  can dynamically handle their children's attendance on their
+                  therapies every week.
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2">
+                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#282828]">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2">
+                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
+                  <span>November 12, 2024</span>
+                  <span>|</span>
+                  <span>by Christopher Benneth</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#282828]">
+                  PPC-Driven Lead Generation Strategies for Personal Finance
+                  Companies
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          <div className="spacer-large"></div>
+        </div>
+      </section>
       <section id="bc" className="bg-[#282828]/40">
         <div className="max-w-[86.8125rem] px-[1.25rem] mx-auto">
           <div className="spacer-large"></div>
@@ -510,13 +676,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <SiOpenai
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -525,7 +691,7 @@ const HomePage: React.FC<Home> = () => {
                       AI / ML
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0FFF50] rounded-[32px] text-[14px] text-gray-300 gap-1">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
                     <FaDollarSign
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -564,13 +730,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <SiOpenai
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -579,7 +745,7 @@ const HomePage: React.FC<Home> = () => {
                       AI / ML
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0FFF50] rounded-[32px] text-[14px] text-gray-300 gap-1">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
                     <FaDollarSign
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -618,13 +784,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaDatabase
                       size={16}
                       className="group-hover:text-[#282828]"
@@ -633,7 +799,7 @@ const HomePage: React.FC<Home> = () => {
                       Data
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0FFF50] rounded-[32px] text-[14px] text-gray-300 gap-1">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
                     <FaDollarSign
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -672,19 +838,19 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaCloud size={16} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Cloud
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0FFF50] rounded-[32px] text-[14px] text-gray-300 gap-1">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
                     <FaDollarSign
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -723,13 +889,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaShieldHalved
                       size={16}
                       className="group-hover:text-[#282828]"
@@ -738,7 +904,7 @@ const HomePage: React.FC<Home> = () => {
                       Security
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0FFF50] rounded-[32px] text-[14px] text-gray-300 gap-1">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
                     <FaDollarSign
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -776,13 +942,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Completion
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaShieldHalved
                       size={16}
                       className="group-hover:text-[#282828]"
@@ -791,7 +957,7 @@ const HomePage: React.FC<Home> = () => {
                       Security
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0FFF50] rounded-[32px] text-[14px] text-gray-300 gap-1">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
                     <FaDollarSign
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -830,13 +996,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaShieldHalved
                       size={16}
                       className="group-hover:text-[#282828]"
@@ -845,10 +1011,10 @@ const HomePage: React.FC<Home> = () => {
                       Security
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
+                    <FaGift size={16} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                      Free
+                      Gift
                     </div>
                   </div>
                 </div>
@@ -880,13 +1046,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaShieldHalved
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -895,13 +1061,13 @@ const HomePage: React.FC<Home> = () => {
                       Security
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#F88379] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <FaCoins
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
+                    <FaDollarSign
                       size={14}
-                      className="-mt-[2px] group-hover:text-[#282828]"
+                      className="group-hover:text-[#282828]"
                     />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                      Funded
+                      Paid
                     </div>
                   </div>
                 </div>
@@ -933,25 +1099,25 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaCloud size={14} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Cloud
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#F88379] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <FaCoins
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
+                    <FaDollarSign
                       size={14}
-                      className="-mt-[2px] group-hover:text-[#282828]"
+                      className="group-hover:text-[#282828]"
                     />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                      Funded
+                      Paid
                     </div>
                   </div>
                 </div>
@@ -983,22 +1149,22 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Completion
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaCode size={14} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Development
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
+                    <FaGift size={16} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                      Free
+                      Gift
                     </div>
                   </div>
                 </div>
@@ -1028,22 +1194,22 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Completion
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaCode size={14} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Development
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
+                    <FaGift size={16} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                      Free
+                      Gift
                     </div>
                   </div>
                 </div>
@@ -1073,22 +1239,22 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Completion
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaCode size={14} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Development
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
+                    <FaGift size={16} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                      Free
+                      Gift
                     </div>
                   </div>
                 </div>
@@ -1118,22 +1284,22 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Completion
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaCode size={14} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Development
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
+                    <FaGift size={16} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                      Free
+                      Gift
                     </div>
                   </div>
                 </div>
@@ -1163,22 +1329,22 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Completion
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaCode size={14} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Development
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
+                    <FaGift size={16} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                      Free
+                      Gift
                     </div>
                   </div>
                 </div>
@@ -1239,13 +1405,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <SiOpenai
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -1254,7 +1420,7 @@ const HomePage: React.FC<Home> = () => {
                       AI / ML
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0FFF50] rounded-[32px] text-[14px] text-gray-300 gap-1">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
                     <FaDollarSign
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -1286,13 +1452,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <SiOpenai
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -1301,7 +1467,7 @@ const HomePage: React.FC<Home> = () => {
                       AI / ML
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0FFF50] rounded-[32px] text-[14px] text-gray-300 gap-1">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
                     <FaDollarSign
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -1332,13 +1498,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaDatabase
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -1347,7 +1513,7 @@ const HomePage: React.FC<Home> = () => {
                       Data
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0FFF50] rounded-[32px] text-[14px] text-gray-300 gap-1">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
                     <FaDollarSign
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -1378,19 +1544,19 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaCloud size={14} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Cloud
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0FFF50] rounded-[32px] text-[14px] text-gray-300 gap-1">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
                     <FaDollarSign
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -1421,13 +1587,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaShieldHalved
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -1436,7 +1602,7 @@ const HomePage: React.FC<Home> = () => {
                       Security
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0FFF50] rounded-[32px] text-[14px] text-gray-300 gap-1">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
                     <FaDollarSign
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -1466,19 +1632,19 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Completion
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaCode size={14} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Development
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0FFF50] rounded-[32px] text-[14px] text-gray-300 gap-1">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
                     <FaDollarSign
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -1508,13 +1674,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Completion
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaShieldHalved
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -1523,7 +1689,7 @@ const HomePage: React.FC<Home> = () => {
                       Security
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0FFF50] rounded-[32px] text-[14px] text-gray-300 gap-1">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
                     <FaDollarSign
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -1553,25 +1719,25 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaCloud size={14} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Cloud
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#F88379] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <FaCoins
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
+                    <FaDollarSign
                       size={14}
-                      className="-mt-[2px] group-hover:text-[#282828]"
+                      className="group-hover:text-[#282828]"
                     />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                      Funded
+                      Paid
                     </div>
                   </div>
                 </div>
@@ -1595,13 +1761,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaShieldHalved
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -1610,10 +1776,10 @@ const HomePage: React.FC<Home> = () => {
                       Security
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#efefef] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#efefef] rounded-[4px] text-[14px] text-gray-300 gap-2">
+                    <FaGift size={16} className="group-hover:text-[#282828]" />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                      Free
+                      Gift
                     </div>
                   </div>
                 </div>
@@ -1637,13 +1803,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <FaShieldHalved
                       size={14}
                       className="group-hover:text-[#282828]"
@@ -1652,13 +1818,13 @@ const HomePage: React.FC<Home> = () => {
                       Security
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#F88379] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <FaCoins
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
+                    <FaDollarSign
                       size={14}
-                      className="-mt-[2px] group-hover:text-[#282828]"
+                      className="group-hover:text-[#282828]"
                     />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                      Funded
+                      Paid
                     </div>
                   </div>
                 </div>
@@ -1682,35 +1848,32 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#FFD700] rounded-[32px] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
                     </div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#0096FF] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <FaShieldHalved
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
+                    <FaCode size={14} className="group-hover:text-[#282828]" />
+                    <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                      Development
+                    </div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
+                    <FaDollarSign
                       size={14}
                       className="group-hover:text-[#282828]"
                     />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                      Security
-                    </div>
-                  </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#acacac]/10 group-hover:bg-[#F88379] rounded-[32px] text-[14px] text-gray-300 gap-2">
-                    <FaCoins
-                      size={14}
-                      className="-mt-[2px] group-hover:text-[#282828]"
-                    />
-                    <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                      Funded
+                      Paid
                     </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full h-full p-2">
+              <div className="w-full h-full p-2 group">
                 <img
                   src={completecybercert}
                   className="cursor-pointer aspect-[3/2] grayscale hover:aspect-[1/1] hover:grayscale-0 z-20 transition-hover duration-[400ms] ease-in"
@@ -1725,9 +1888,33 @@ const HomePage: React.FC<Home> = () => {
                 <div className="text-[#f2f2f2]">
                   The Complete Cyber Security Course : Hackers Exposed
                 </div>
+                <div className="spacer-small"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#FFD700] rounded-[4px] text-[14px] text-gray-300 gap-2">
+                    <div className="w-[10px] h-[10px] rounded-50 bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
+                    <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                      Certification
+                    </div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] rounded-[4px] text-[14px] text-gray-300 gap-2">
+                    <FaCode size={14} className="group-hover:text-[#282828]" />
+                    <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                      Development
+                    </div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] rounded-[4px] text-[14px] text-gray-300 gap-1">
+                    <FaDollarSign
+                      size={14}
+                      className="group-hover:text-[#282828]"
+                    />
+                    <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
+                      Paid
+                    </div>
+                  </div>
+                </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className="w-full h-full p-2">
                 <img
                   src={learnjavascriptcoursecert}
@@ -1742,124 +1929,12 @@ const HomePage: React.FC<Home> = () => {
                 <div className="spacer-xs"></div>
                 <div className="text-[#f2f2f2]">Learn JavaScript</div>
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
           <div className="spacer-large"></div>
         </div>
       </section>
-      {/* <section id="projects" className="bg-[#282828] relative">
-        <img
-          className="absolute top-0 left-0 w-full h-full opacity-[0.16]"
-          src={dots}
-        />
-        <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
-          <div className="spacer-large"></div>
-          <div className="text-[#f2f2f2]">Projects</div>
-          <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
-          <div className="spacer-small"></div>
-          <h2 className="text-[2.875rem] text-[#f2f2f2] leading-[1.275]">
-            Check out my projects <br />
-            <span className="text-[#919191] font-[regular] light-sweep">
-              These works aspires to be best
-            </span>
-          </h2>
-          <div className="spacer-medium"></div>
-          <div className="spacer-small"></div>
-          <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
-          <div className="spacer-small"></div>
-          <h3 className="text-[1.75rem] text-[#f2f2f2] font-[regular]">
-            Recent projects
-          </h3>
-          <div className="spacer-medium"></div>
-          <div className="spacer-xs"></div>
-          <Swiper
-            spaceBetween="20"
-            slidesPerView={4}
-            autoplay={{
-              delay: 1000,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            modules={[Autoplay, Pagination]}
-            className="blogs-swiper"
-          >
-            <SwiperSlide className="">
-              <div className="w-full h-full p-2">
-                <img
-                  src={plvosaproj}
-                  className="cursor-pointer aspect-[3/2] hover:aspect-[1/1] z-20 transition-hover duration-[400ms] ease-in"
-                />
-                <div className="spacer-small"></div>
-                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
-                  <span>November 21, 2024</span>
-                  <span>|</span>
-                  <span>by Kludy Ramirez</span>
-                </div>
-                <div className="spacer-xs"></div>
-                <div className="text-[#f2f2f2]">
-                  PLV OSA Reprimand Hub: A web-based digital hub where the
-                  pamantasan can handle student cases, offenses, and violations.
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full p-2">
-                <img
-                  src={mlacproj}
-                  className="cursor-pointer aspect-[1/1] hover:aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in"
-                />
-                <div className="spacer-small"></div>
-                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
-                  <span>November 21, 2024</span>
-                  <span>|</span>
-                  <span>by Kludy Ramirez</span>
-                </div>
-                <div className="spacer-xs"></div>
-                <div className="text-[#f2f2f2]">
-                  MLAC: A web-based application where parents of MLAC students
-                  can dynamically handle their children's attendance on their
-                  therapies every week.
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full p-2">
-                <div className="aspect-[2/3] bg-gradient-to-br from-gray-300 to-gray-800"></div>
-                <div className="spacer-small"></div>
-                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
-                  <span>November 12, 2024</span>
-                  <span>|</span>
-                  <span>by Christopher Benneth</span>
-                </div>
-                <div className="spacer-xs"></div>
-                <div className="text-[#f2f2f2]">
-                  PPC-Driven Lead Generation Strategies for Personal Finance
-                  Companies
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full p-2">
-                <div className="aspect-[3/2] bg-gradient-to-br from-gray-300 to-gray-800"></div>
-                <div className="spacer-small"></div>
-                <div className="flex align-items gap-2 text-[.850rem] text-gray-400 font-[extra-light]">
-                  <span>November 12, 2024</span>
-                  <span>|</span>
-                  <span>by Christopher Benneth</span>
-                </div>
-                <div className="spacer-xs"></div>
-                <div className="text-[#f2f2f2]">
-                  PPC-Driven Lead Generation Strategies for Personal Finance
-                  Companies
-                </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
-          <div className="spacer-large"></div>
-        </div>
-      </section> */}
+
       {/* <section id="testimonials" className="relative">
         <img className="absolute bottom-0 w-full" src={dotunder} />
         <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
@@ -1963,7 +2038,7 @@ const HomePage: React.FC<Home> = () => {
           </Swiper>
         </div>
       </section> */}
-      <footer id="footer" className="bg-[#282828]/40">
+      <footer id="footer" className="bg-[#282828]/40 relative">
         <div className="w-full flex justify-between items-center bg-transparent sm:hidden">
           <div
             style={{ clipPath: 'polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%)' }}
@@ -1978,7 +2053,7 @@ const HomePage: React.FC<Home> = () => {
         </div>
 
         <div className="w-full bg-[#efefef]">
-          <div className="max-w-[86.8125rem] px-[1.25rem] mx-auto">
+          <div className="max-w-[86.8125rem] px-[1.25rem] mx-auto relative z-20">
             <div className="spacer-small hidden sm:block"></div>
             <div className="w-full flex justify-between items-center sm:flex-col sm:justify-start sm:gap-4 sm:pt-4">
               <div className="flex items-center">
