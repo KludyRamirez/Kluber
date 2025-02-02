@@ -67,16 +67,23 @@ import {
   FaCloud,
   FaCode,
   FaDatabase,
+  FaDocker,
   FaDollarSign,
   FaFacebook,
   FaGift,
   FaGithub,
+  FaGlobe,
   FaInstagram,
+  FaJava,
+  FaLink,
   FaLinkedin,
+  FaNodeJs,
   FaReact,
   FaRegEnvelope,
   FaShieldHalved,
 } from 'react-icons/fa6';
+
+import { HiOutlineBriefcase } from 'react-icons/hi2';
 
 import { SiOpenai } from 'react-icons/si';
 
@@ -439,12 +446,12 @@ const HomePage: React.FC<Home> = () => {
           <div className="spacer-large"></div>
         </div>
       </section>
-      <section id="projects" className="bg-[#efefef] relative">
+      <section id="projects" className="bg-[#dedede] relative">
         <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
           <div className="spacer-large"></div>
           <div className="text-[#282828]">Projects</div>
           <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-gray-300"></div>
+          <div className="w-full h-[1px] bg-[#0000001a]"></div>
           <div className="spacer-small"></div>
           <h2 className="text-[2.875rem] text-[#282828] leading-[1.275]">
             Check out my projects <br />
@@ -455,7 +462,7 @@ const HomePage: React.FC<Home> = () => {
           <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
           <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-gray-300"></div>
+          <div className="w-full h-[1px] bg-[#0000001a]"></div>
           <div className="spacer-small"></div>
           <h3 className="text-[1.75rem] text-[#282828] font-[regular]">
             Recent projects
@@ -473,12 +480,14 @@ const HomePage: React.FC<Home> = () => {
             modules={[Autoplay, Pagination]}
             className="blogs-swiper"
           >
-            <SwiperSlide className="">
+            <SwiperSlide>
               <div className="w-full h-full p-2 group">
-                <img
-                  src={bpiaiaproj}
-                  className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in"
-                />
+                <a href="https://www.bpi-aia.com.ph/en/" target="_blank">
+                  <img
+                    src={bpiaiaproj}
+                    className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in"
+                  />
+                </a>
                 <div className="spacer-small"></div>
                 <div className="flex align-items gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
                   <span>November 21, 2024</span>
@@ -486,40 +495,52 @@ const HomePage: React.FC<Home> = () => {
                   <span>by Kludy Ramirez</span>
                 </div>
                 <div className="spacer-xs"></div>
+                <div className="text-[#282828] cursor-pointer group-hover:underline">
+                  BPI AIA
+                </div>
+                <div className="spacer-xs"></div>
                 <div className="text-[#282828]">
-                  BPI AIA official website: The site covers insurance plans, company info, wellness programs, and support.
+                  The website covers insurance plans, company info, wellness
+                  programs, and support.
+                </div>
+                <div className="spacer-small"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-4">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
+                    <FaGithub size={16} />
+                    <div className="mt-[2px] tracking-wide">Github</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
+                    <FaLink size={16} />
+                    <div className="mt-[2px] tracking-wide">Live URL</div>
+                  </div>
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#efefef] group-hover:bg-[#282828] text-[14px] text-[#282828] group-hover:text-[#efefef] gap-2 border-[1px] border-[#282828]">
-                    <FaReact
-                      size={16}
-                    />
-                    <div className="mt-[2px] tracking-wide">
-                      React.js
-                    </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaReact size={16} />
+                    <div className="mt-[2px] tracking-wide">React.js</div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#efefef] group-hover:bg-[#282828] text-[14px] text-[#282828] group-hover:text-[#efefef] gap-2 border-[1px] border-[#282828]">
-                    <FaBootstrap
-                      size={16}
-                    />
-                    <div className="mt-[2px] tracking-wide">
-                      Bootstrap
-                    </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaJava size={16} />
+                    <div className="mt-[2px] tracking-wide">Java</div>
                   </div>
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#efefef] group-hover:bg-[#282828] text-[14px] text-[#282828] group-hover:text-[#efefef] gap-2 border-[1px] border-[#282828]">
-                    <FaReact
-                      size={16}
-                    />
-                    <div className="mt-[2px] tracking-wide">
-                      React.js
-                    </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaBootstrap size={16} />
+                    <div className="mt-[2px] tracking-wide">Bootstrap</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaDocker size={16} />
+                    <div className="mt-[2px] tracking-wide">Docker</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaNodeJs size={16} />
+                    <div className="mt-[2px] tracking-wide">Node.js</div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide className="">
-              <div className="w-full h-full p-2">
+              <div className="w-full h-full p-2 group">
                 <img
                   src={aiaproj}
                   className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in"
@@ -531,15 +552,52 @@ const HomePage: React.FC<Home> = () => {
                   <span>by Kludy Ramirez</span>
                 </div>
                 <div className="spacer-xs"></div>
+                <div className="text-[#282828] group-hover:underline">
+                  AIA PH
+                </div>
+                <div className="spacer-xs"></div>
                 <div className="text-[#282828]">
-                  AIA PH official website: The site provides insurance, company details, wellness, and support.
+                  The website covers insurance plans, company info, wellness
+                  programs, and support.
+                </div>
+                <div className="spacer-small"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaGithub size={16} />
+                    <div className="mt-[2px] tracking-wide">Github</div>
+                  </div>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="w-full h-[1px] bg-[#0000001a]"></div>
+                <div className="spacer-xs"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaReact size={16} />
+                    <div className="mt-[2px] tracking-wide">React.js</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaJava size={16} />
+                    <div className="mt-[2px] tracking-wide">Java</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaBootstrap size={16} />
+                    <div className="mt-[2px] tracking-wide">Bootstrap</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaDocker size={16} />
+                    <div className="mt-[2px] tracking-wide">Docker</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaNodeJs size={16} />
+                    <div className="mt-[2px] tracking-wide">Node.js</div>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide className="">
-              <div className="w-full h-full p-2">
+              <div className="w-full h-full p-2 group">
                 <img
-                  src={aiathproj}
+                  src={aiaproj}
                   className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in"
                 />
                 <div className="spacer-small"></div>
@@ -549,13 +607,48 @@ const HomePage: React.FC<Home> = () => {
                   <span>by Kludy Ramirez</span>
                 </div>
                 <div className="spacer-xs"></div>
+                <div className="text-[#282828] group-hover:underline">
+                  AIA TH
+                </div>
+                <div className="spacer-xs"></div>
                 <div className="text-[#282828]">
-                  AIA TH official website: The site provides insurance, company details, wellness, and support.
+                  The website provides insurance plans, company info, wellness
+                  programs, and support.
+                </div>
+                <div className="spacer-small"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaGithub size={16} />
+                    <div className="mt-[2px] tracking-wide">Work</div>
+                  </div>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaReact size={16} />
+                    <div className="mt-[2px] tracking-wide">React.js</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaJava size={16} />
+                    <div className="mt-[2px] tracking-wide">Java</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaBootstrap size={16} />
+                    <div className="mt-[2px] tracking-wide">Bootstrap</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaDocker size={16} />
+                    <div className="mt-[2px] tracking-wide">Docker</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaNodeJs size={16} />
+                    <div className="mt-[2px] tracking-wide">Node.js</div>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide className="">
-              <div className="w-full h-full p-2">
+              <div className="w-full h-full p-2 group">
                 <img
                   src={plvosaproj}
                   className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in"
@@ -567,14 +660,48 @@ const HomePage: React.FC<Home> = () => {
                   <span>by Kludy Ramirez</span>
                 </div>
                 <div className="spacer-xs"></div>
+                <div className="text-[#282828] group-hover:underline">
+                  PLV OSA Reprimand Hub
+                </div>
+                <div className="spacer-xs"></div>
                 <div className="text-[#282828]">
-                  PLV OSA Reprimand Hub: A web-based digital hub where the
-                  pamantasan can handle student cases, offenses, and violations.
+                  A web-based digital hub where the pamantasan can handle
+                  student cases, offenses, and violations.
+                </div>
+                <div className="spacer-small"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaGithub size={16} />
+                    <div className="mt-[2px] tracking-wide">Work</div>
+                  </div>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaReact size={16} />
+                    <div className="mt-[2px] tracking-wide">React.js</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaNodeJs size={16} />
+                    <div className="mt-[2px] tracking-wide">Node.js</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaBootstrap size={16} />
+                    <div className="mt-[2px] tracking-wide">Bootstrap</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaDocker size={16} />
+                    <div className="mt-[2px] tracking-wide">Docker</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaNodeJs size={16} />
+                    <div className="mt-[2px] tracking-wide">Node.js</div>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full h-full p-2">
+              <div className="w-full h-full p-2 group">
                 <img
                   src={mlacproj}
                   className="cursor-pointer aspect-[3/2] z-20 transition-hover duration-[400ms] ease-in"
@@ -586,10 +713,42 @@ const HomePage: React.FC<Home> = () => {
                   <span>by Kludy Ramirez</span>
                 </div>
                 <div className="spacer-xs"></div>
+                <div className="text-[#282828] group-hover:underline">MLAC</div>
+                <div className="spacer-xs"></div>
                 <div className="text-[#282828]">
-                  MLAC: A web-based application where parents of MLAC students
-                  can dynamically handle their children's attendance on their
+                  A web-based application where parents of MLAC students can
+                  dynamically handle their children's attendance on their
                   therapies every week.
+                </div>
+                <div className="spacer-small"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaGithub size={16} />
+                    <div className="mt-[2px] tracking-wide">Work</div>
+                  </div>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaReact size={16} />
+                    <div className="mt-[2px] tracking-wide">React.js</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaNodeJs size={16} />
+                    <div className="mt-[2px] tracking-wide">Node.js</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaBootstrap size={16} />
+                    <div className="mt-[2px] tracking-wide">Bootstrap</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaDocker size={16} />
+                    <div className="mt-[2px] tracking-wide">Docker</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-white/20 group-hover:bg-[#282828] text-[14px] text-[#282828] gap-2 group-hover:text-[#efefef]">
+                    <FaNodeJs size={16} />
+                    <div className="mt-[2px] tracking-wide">Node.js</div>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -1926,9 +2085,12 @@ const HomePage: React.FC<Home> = () => {
                     </div>
                   </div>
                   <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#92E8FF] text-[14px] text-gray-300 gap-2">
-                    <FaCode size={14} className="group-hover:text-[#282828]" />
+                    <FaShieldHalved
+                      size={14}
+                      className="group-hover:text-[#282828]"
+                    />
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
-                      Development
+                      Security
                     </div>
                   </div>
                   <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#a0a0a0]/10 group-hover:bg-[#0FFF50] text-[14px] text-gray-300 gap-1">
