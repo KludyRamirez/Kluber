@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ isHeroSectionActive }) => {
         className={`w-[100%] flex justify-center items-center fixed z-30 transition-all duration-200 ease-in ${
           isHeroSectionActive
             ? 'bg-transparent text-[#efefef]'
-            : 'bg-[#efefef]/10 backdrop-blur-lg text-[#efefef]'
+            : 'hidden'
         }`}
       >
         <div
