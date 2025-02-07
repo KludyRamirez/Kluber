@@ -53,7 +53,7 @@ import completecybercert from '../assets/images/completecybercert.jpg';
 import plvosaproj from '../assets/images/plvosaproj.png';
 import plvosaprojlogo from '../assets/images/plvosaprojlogo.png';
 import mlacproj from '../assets/images/mlacproj.png';
-import mlacprojlogo from '../assets/images/mlacprojlogo.png';
+import mlacprojlogo from '../assets/images/mlacprojlogo.svg';
 import bpiaiaproj from '../assets/images/bpiaiaproj.png';
 import bpiaiaprojlogo from '../assets/images/bpiaiaprojlogo.svg';
 import aiaproj from '../assets/images/aiaproj.png';
@@ -61,6 +61,9 @@ import aiaprojlogo from '../assets/images/aiaprojlogo.svg';
 import aiathproj from '../assets/images/aiathproj.png';
 import apdtechexam from '../assets/images/apdtechexam.png';
 import apdtechexamlogo from '../assets/images/apdtechexamlogo.png';
+import galatictechexamsproj from '../assets/images/galatictechexamsproj.svg';
+import galaticprojlogo from '../assets/images/galaticprojlogo.png';
+import regformproj from '../assets/images/regformproj.png';
 import tcmcert from '../assets/images/tcmcert.png';
 import webdev from '../assets/images/webdev.jpg';
 import bitbucket from '../assets/images/bitbucket.svg';
@@ -71,12 +74,14 @@ import {
   FaBootstrap,
   FaCloud,
   FaCode,
+  FaCss3,
   FaDatabase,
   FaDocker,
   FaDollarSign,
   FaFacebook,
   FaGift,
   FaGithub,
+  FaHtml5,
   FaInstagram,
   FaJava,
   FaLinkedin,
@@ -84,10 +89,13 @@ import {
   FaPython,
   FaReact,
   FaRegEnvelope,
+  FaSass,
   FaShieldHalved,
+  FaVuejs,
 } from 'react-icons/fa6';
 
 import { SiOpenai } from 'react-icons/si';
+import BubbleEffect from '../utils/BubbleEffect';
 
 const HomePage: React.FC<Home> = () => {
   const [isHeroSectionActive, setIsHeroSectionActive] = useState(false);
@@ -120,6 +128,12 @@ const HomePage: React.FC<Home> = () => {
       <StarsCanvas />
       <Navbar isHeroSectionActive={isHeroSectionActive} />
       <section id="hero" className="relative" ref={heroSectionRef}>
+        <div className="w-full absolute flex justify-center -bottom-[42px]">
+          /=
+          <div>
+            <BubbleEffect />
+          </div>
+        </div>
         <div className="max-w-[86.8125rem] px-[1.25rem] mx-auto relative z-20">
           <div className="spacer-large"></div>
           <div className="spacer-large"></div>
@@ -203,7 +217,10 @@ const HomePage: React.FC<Home> = () => {
         </div>
         <div className="spacer-large"></div>
       </section>
-      {/* <section id="blogs" ref={heroSectionRef} className="bg-[#efefef]">
+      <section
+        id="blogs"
+        className="bg-white relative z-20"
+      >
         <div className="w-[86.8125rem] px-[1.25rem] mx-auto">
           <div className="spacer-large"></div>
           <div className="text-[#282828]">Blogs</div>
@@ -305,7 +322,7 @@ const HomePage: React.FC<Home> = () => {
           </Swiper>
           <div className="spacer-large"></div>
         </div>
-      </section> */}
+      </section>
       <section id="experiences">
         <div className="max-w-[86.8125rem] px-[1.25rem] mx-auto">
           <div className="spacer-large"></div>
@@ -347,19 +364,19 @@ const HomePage: React.FC<Home> = () => {
               </div>
 
               <ul>
-                <li className="text-[16px] text-[#919191] light-sweep tracking-wide">
+                <li className="text-[16px] text-[#919191] tracking-wide">
                   Leads development and management of PAGCOR's online gaming
                   platforms (e.g., LakiWin, OCMS),utilizing Vue.js/Nuxt.js,
                   Storybook.js, Pug.js, Cypress, and Jest.
                 </li>
 
-                <li className="text-[16px] text-[#919191] light-sweep">
+                <li className="text-[16px] text-[#919191]">
                   Guides the team in reviewing more than 26 pull requests,
                   delivering valuable feedback that significantly enhanced code
                   quality and maintainability compared to earlier practices.
                 </li>
 
-                <li className="text-[16px] text-[#919191] light-sweep">
+                <li className="text-[16px] text-[#919191]">
                   Chosen as one of the key engineers to collaborate with
                   international developers on a major large scale project
                   focused on back-office systems.
@@ -385,20 +402,20 @@ const HomePage: React.FC<Home> = () => {
               </div>
 
               <ul>
-                <li className="text-[16px] text-[#919191] light-sweep tracking-wide">
+                <li className="text-[16px] text-[#919191] tracking-wide">
                   Developed a web application that successfully managed up to
                   12,000 student affairs records and processed more than 7,000
                   students’ cases and appeals at Pamantasan ng Lungsod ng
                   Valenzuela.
                 </li>
 
-                <li className="text-[16px] text-[#919191] light-sweep">
+                <li className="text-[16px] text-[#919191]">
                   Guides the team in reviewing more than 26 pull requests,
                   delivering valuable feedback that significantly enhanced code
                   quality and maintainability compared to earlier practices.
                 </li>
 
-                <li className="text-[16px] text-[#919191] light-sweep">
+                <li className="text-[16px] text-[#919191]">
                   Chosen as one of the key engineers to collaborate with
                   international developers on a major large scale project
                   focused on back-office systems.
@@ -424,19 +441,19 @@ const HomePage: React.FC<Home> = () => {
               </div>
 
               <ul>
-                <li className="text-[16px] text-[#919191] light-sweep tracking-wide">
+                <li className="text-[16px] text-[#919191]">
                   Leads development and management of PAGCOR's online gaming
                   platforms (e.g., LakiWin, OCMS),utilizing Vue.js/Nuxt.js,
                   Storybook.js, Pug.js, Cypress, and Jest.
                 </li>
 
-                <li className="text-[16px] text-[#919191] light-sweep">
+                <li className="text-[16px] text-[#919191]">
                   Guides the team in reviewing more than 26 pull requests,
                   delivering valuable feedback that significantly enhanced code
                   quality and maintainability compared to earlier practices.
                 </li>
 
-                <li className="text-[16px] text-[#919191] light-sweep">
+                <li className="text-[16px] text-[#919191]">
                   Chosen as one of the key engineers to collaborate with
                   international developers on a major large scale project
                   focused on back-office systems.
@@ -485,7 +502,7 @@ const HomePage: React.FC<Home> = () => {
             <SwiperSlide>
               <div className="w-full h-full p-2 group">
                 <div className="relative cursor-pointer">
-                  <div className="absolute flex justify-center items-center top-0 left-0 bg-[#9b1c21]/90 w-full h-full group-hover:bg-transparent transition-group duration-[400ms] ease-in-out">
+                  <div className="absolute flex justify-center items-center top-0 left-0 bg-[#9b1c21] w-full h-full group-hover:bg-transparent transition-group duration-[400ms] ease-in-out">
                     <img
                       src={bpiaiaprojlogo}
                       className="w-[260px] group-hover:opacity-0 transition-group duration-[400ms] ease-in-out"
@@ -760,10 +777,10 @@ const HomePage: React.FC<Home> = () => {
             <SwiperSlide>
               <div className="w-full h-full p-2 group">
                 <div className="relative cursor-pointer group">
-                  <div className="absolute flex justify-center items-center top-0 left-0 bg-[#007bff] w-full h-full group-hover:bg-transparent transition-group duration-[400ms] ease-in-out">
+                  <div className="absolute flex justify-center items-center top-0 left-0 bg-[#F4BB44] w-full h-full group-hover:bg-transparent transition-group duration-[400ms] ease-in-out">
                     <img
                       src={mlacprojlogo}
-                      className="w-[80px] group-hover:opacity-0 transition-group duration-[400ms] ease-in-out"
+                      className="w-[200px] group-hover:opacity-0 transition-group duration-[400ms] ease-in-out"
                     />
                   </div>
                   <a href="https://www.bpi-aia.com.ph/en/" target="_blank">
@@ -826,7 +843,7 @@ const HomePage: React.FC<Home> = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full h-full p-2 group">
-              <div className="relative cursor-pointer group">
+                <div className="relative cursor-pointer group">
                   <div className="absolute flex justify-center items-center top-0 left-0 bg-[#d21045] w-full h-full group-hover:bg-transparent transition-group duration-[400ms] ease-in-out">
                     <img
                       src={apdtechexamlogo}
@@ -848,7 +865,7 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-xs"></div>
                 <div className="text-[#282828] group-hover:underline">
-                  APD Technical Exam
+                  GrowthOps Technical Exam
                 </div>
                 <div className="spacer-xs"></div>
                 <div className="text-[#282828]">
@@ -889,6 +906,134 @@ const HomePage: React.FC<Home> = () => {
                   <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 border-[1px] border-gray-300 group-hover:border-[#282828] text-[14px] text-[#282828] gap-2 group-hover:bg-[#282828] group-hover:text-white">
                     <FaNodeJs size={16} />
                     <div className="mt-[2px] tracking-wide">Node.js</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2 group">
+                <div className="relative cursor-pointer group">
+                  <div className="absolute flex justify-center items-center top-0 left-0 bg-[#0054a6] w-full h-full group-hover:bg-transparent transition-group duration-[400ms] ease-in-out">
+                    <img
+                      src={galaticprojlogo}
+                      className="w-[200px] group-hover:opacity-0 transition-group duration-[400ms] ease-in-out"
+                    />
+                  </div>
+                  <a href="https://www.bpi-aia.com.ph/en/" target="_blank">
+                    <img
+                      src={galatictechexamsproj}
+                      className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
+                    />
+                  </a>
+                </div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
+                  <span>November 21, 2024</span>
+                  <span>|</span>
+                  <span>by Kludy Ramirez</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#282828] group-hover:underline">
+                  Galatic Technical Exams
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#282828]">
+                  This exams measure my skills on HTML, CSS, SCSS, and its core
+                  principles and my techniques on front-end development.
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-4">
+                  <a
+                    href="https://galatic-first-card-assessment.netlify.app/"
+                    target="_blank"
+                  >
+                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
+                      <div className="mt-[2px] tracking-wide">Link 1</div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://galatic-second-card-assessment.netlify.app/"
+                    target="_blank"
+                  >
+                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
+                      <div className="mt-[2px] tracking-wide">Link 2</div>
+                    </div>
+                  </a>
+
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
+                    <div className="mt-[2px] tracking-wide">Github</div>
+                  </div>
+                </div>
+                <div className="spacer-small"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 border-[1px] border-gray-300 group-hover:border-[#282828] text-[14px] text-[#282828] gap-2 group-hover:bg-[#282828] group-hover:text-white">
+                    <FaHtml5 size={16} />
+                    <div className="mt-[2px] tracking-wide">HTML</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 border-[1px] border-gray-300 group-hover:border-[#282828] text-[14px] text-[#282828] gap-2 group-hover:bg-[#282828] group-hover:text-white">
+                    <FaCss3 size={16} />
+                    <div className="mt-[2px] tracking-wide">CSS</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 border-[1px] border-gray-300 group-hover:border-[#282828] text-[14px] text-[#282828] gap-2 group-hover:bg-[#282828] group-hover:text-white">
+                    <FaSass size={16} />
+                    <div className="mt-[2px] tracking-wide">SASS</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full p-2 group">
+                <div className="relative cursor-pointer group">
+                  <div className="absolute flex justify-center items-center top-0 left-0 bg-[#673098] w-full h-full group-hover:bg-transparent transition-group duration-[400ms] ease-in-out">
+                    <img
+                      src={galaticprojlogo}
+                      className="w-[200px] group-hover:opacity-0 transition-group duration-[400ms] ease-in-out"
+                    />
+                  </div>
+                  <a href="https://www.bpi-aia.com.ph/en/" target="_blank">
+                    <img
+                      src={regformproj}
+                      className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
+                    />
+                  </a>
+                </div>
+                <div className="spacer-small"></div>
+                <div className="flex align-items gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
+                  <span>November 21, 2024</span>
+                  <span>|</span>
+                  <span>by Kludy Ramirez</span>
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#282828] group-hover:underline">
+                  Registration Page Exam
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="text-[#282828]">
+                  A registration form built on Vue 2 and Nuxt 2 for Galatic
+                  Events Corporation.
+                </div>
+                <div className="spacer-xs"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-4">
+                  <a href="https://www.aia.com.ph/en/" target="_blank">
+                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
+                      <div className="mt-[2px] tracking-wide">Link</div>
+                    </div>
+                  </a>
+
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
+                    <div className="mt-[2px] tracking-wide">Github</div>
+                  </div>
+                </div>
+                <div className="spacer-small"></div>
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 border-[1px] border-gray-300 group-hover:border-[#282828] text-[14px] text-[#282828] gap-2 group-hover:bg-[#282828] group-hover:text-white">
+                    <FaVuejs size={16} />
+                    <div className="mt-[2px] tracking-wide">Vue.js</div>
+                  </div>
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 border-[1px] border-gray-300 group-hover:border-[#282828] text-[14px] text-[#282828] gap-2 group-hover:bg-[#282828] group-hover:text-white">
+                    <FaSass size={16} />
+                    <div className="mt-[2px] tracking-wide">SASS</div>
                   </div>
                 </div>
               </div>
@@ -2342,63 +2487,38 @@ const HomePage: React.FC<Home> = () => {
         <div className="w-full flex justify-between items-center bg-transparent sm:hidden">
           <div
             style={{ clipPath: 'polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%)' }}
-            className="w-[33%] py-[60px] sm:py-[30px] bg-[#efefef]"
+            className="w-[33%] py-[60px] sm:py-[30px] bg-white"
           ></div>
           <div
             style={{
               clipPath: 'polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)',
             }}
-            className="w-[33%] py-[60px] sm:py-[30px] bg-[#efefef]"
+            className="w-[33%] py-[60px] sm:py-[30px] bg-white"
           ></div>
         </div>
 
-        <div className="w-full bg-[#efefef]">
+        <div className="w-full bg-white">
           <div className="max-w-[86.8125rem] px-[1.25rem] mx-auto relative z-20">
-            <div className="spacer-small hidden sm:block"></div>
-            <div className="w-full flex justify-between items-center sm:flex-col sm:justify-start sm:gap-4 sm:pt-4">
-              <div className="flex items-center">
-                <span className="text-[16px] text-[#282828] font-[semi-bold] leading-none">
-                  Klubbr
-                </span>
-              </div>
-              <div className="flex items-center gap-2 cursor-pointer hover:underline">
-                <FaAnglesUp size={14} className="text-[#282828] -mt-[4px]" />
-                <span className="text-[16px] text-[#282828]">Back to top</span>
-              </div>
-            </div>
-
+            <div className="spacer-xs"></div>
             <div className="spacer-small"></div>
-            <div className="w-full h-[1px] bg-gray-300"></div>
             <div className="spacer-small"></div>
-            <div className="w-full flex justify-between items-center sm:flex-col sm:justify-start sm:gap-4">
-              <div className="flex items-center gap-2">
-                <div className="text-[16px] text-[#282828] mt-1">
-                  Made by{' '}
-                  <span className="font-[semi-bold]">
-                    Kludy Ramirez &#10022;
-                  </span>
-                </div>
+            <div className="spacer-medium"></div>
+            <div className="w-full flex flex-col justify-start items-center">
+              <span className="text-[48px] text-[#282828] font-[semi-bold]">
+                Let's Connect
+              </span>
+              <div className="spacer-medium"></div>
+              <div className="flex justify-center">
+                <input
+                  className="w-[400px] h-[50px] border-[1px] border-[#282828] px-4 focus:outline-none bg-[#fcfcfc]"
+                  placeholder="Enter your email"
+                />
               </div>
-              <div className="flex items-center gap-3">
-                <FaFacebook
-                  size={24}
-                  className="text-[#505050] hover:text-[#282828] cursor-pointer"
-                />
-                <FaInstagram
-                  size={24}
-                  className="text-[#505050] hover:text-[#282828] cursor-pointer"
-                />
-                <FaLinkedin
-                  size={24}
-                  className="text-[#505050] hover:text-[#282828] cursor-pointer"
-                />
-                <FaRegEnvelope
-                  size={24}
-                  className="text-[#505050] hover:text-[#282828] cursor-pointer"
-                />
-                <FaGithub
-                  size={24}
-                  className="text-[#505050] hover:text-[#282828] cursor-pointer"
+              <div className="spacer-small"></div>
+              <div className="flex justify-center">
+                <textarea
+                  className="w-[400px] h-[120px] border-[1px] border-[#282828] p-4 focus:border-none bg-[#fcfcfc]"
+                  placeholder="Write some message..."
                 />
               </div>
             </div>
