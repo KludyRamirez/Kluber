@@ -15,7 +15,6 @@ const BubbleEffect: React.FC = () => (
             0 0 0 13 -9"
           result="goo"
         />
-        <xfeBlend in="SourceGraphic" in2="goo" />
       </filter>
     </defs>
 
