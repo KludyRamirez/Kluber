@@ -1,14 +1,10 @@
 import { useState } from 'react';
 
 interface NavbarProps {
-  isExperiencesSectionActive: boolean;
-  isBlogsSectionActive: boolean;
+  isHeroSectionActive: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({
-  isBlogsSectionActive,
-  isExperiencesSectionActive,
-}) => {
+const Navbar: React.FC<NavbarProps> = ({ isHeroSectionActive }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isClosing, setIsClosing] = useState<boolean>(false);
 
@@ -28,18 +24,16 @@ const Navbar: React.FC<NavbarProps> = ({
     <>
       <div
         className={`w-[100%] flex justify-center items-center fixed z-30 transition-all duration-200 ease-in ${
-          isBlogsSectionActive
-            ? 'bg-[#101010] text-[#f2f2f2]' // If Blogs section is active
-            : isExperiencesSectionActive
-            ? 'bg-[#efefef] text-[#101010]' // If Experiences section is active
-            : 'bg-transparent text-[#f2f2f2]' // Default if neither is active
+          isHeroSectionActive
+            ? 'bg-transparent text-[#efefef]'
+            : 'hidden'
         }`}
       >
         <div
           className={`flex justify-between items-center w-[86.8125rem] h-full transition-all duration-200 ease-in ${
-            isBlogsSectionActive || isExperiencesSectionActive
-              ? 'pt-[1rem] pb-[1rem] px-[1rem]'
-              : 'pt-[1.75rem] pb-[1rem] px-[1.25rem]'
+            isHeroSectionActive
+              ? 'pt-[1.75rem] pb-[1rem] px-[1.25rem]'
+              : 'pt-[1rem] pb-[1rem] px-[1rem]'
           }`}
         >
           <span className="text-[20px] font-[semi-bold] tracking-wide">
@@ -59,15 +53,7 @@ const Navbar: React.FC<NavbarProps> = ({
             <span>Projects</span>
             <span>Certifications</span>
             <span>Testimonials</span>
-            <span
-              className={`cursor-pointer py-[1rem] px-[1.75rem] ${
-                isBlogsSectionActive
-                  ? 'reverse-btn'
-                  : isExperiencesSectionActive
-                  ? 'p-2 border-[1px] border-[#101010] text-[#101010] hover:bg-[#101010] hover:text-white'
-                  : 'reverse-btn'
-              } `}
-            >
+            <span className="cursor-pointer py-[1rem] px-[1.75rem] reverse-btn">
               Blog
             </span>
           </div>

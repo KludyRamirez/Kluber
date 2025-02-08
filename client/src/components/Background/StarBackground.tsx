@@ -1,8 +1,8 @@
-import React, { useState, useRef, Suspense } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial } from "@react-three/drei";
-import * as random from "maath/random";
-import { Points as ThreePoints } from "three";
+import React, { useState, useRef, Suspense } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Points, PointMaterial } from '@react-three/drei';
+import * as random from 'maath/random';
+import { Points as ThreePoints } from 'three';
 
 const StarBackground: React.FC = (props) => {
   const ref = useRef<ThreePoints>(null);
@@ -28,7 +28,7 @@ const StarBackground: React.FC = (props) => {
       >
         <PointMaterial
           transparent
-          color="green"
+          color='white'
           size={0.002}
           sizeAttenuation={true}
           depthWrite={false}
