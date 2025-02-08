@@ -227,15 +227,52 @@
   transform: scale(0.9);
 }
 
+/* footer animations */
+
+.footer-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  color: #282828;
+  text-decoration: none;
+  border: none;
+  transition: all 300ms;
+}
+
+.footer-btn:hover {
+  background-color: #282828;
+  color: #fff;
+}
+
+.footer-btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.footer-btn:hover::after {
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+.footer-btn:active {
+  transform: scale(0.9);
+}
+
 .bubble-effect {
   width: 100%;
   overflow: visible;
 }
 
 .drop {
-  fill: white;
+  fill: #101010;
   animation: drop 3.2s linear infinite normal;
-  stroke: white;
+  stroke: #101010;
   stroke-width: 0.5;
   transform: translateY(25px);
   transform-box: fill-box;

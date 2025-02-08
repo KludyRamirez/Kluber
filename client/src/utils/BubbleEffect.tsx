@@ -1,7 +1,7 @@
 import React from "react";
 
 const BubbleEffect: React.FC = () => (
-  <svg viewBox="0 0 28 28" className="bubble-effect">
+  <svg viewBox="0 0 24 24" className="bubble-effect">
     <defs>
       <filter id="goo">
         <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur" />
