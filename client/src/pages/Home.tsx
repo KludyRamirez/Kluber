@@ -70,7 +70,6 @@ import bitbucket from '../assets/images/bitbucket.svg';
 import StarsCanvas from '../components/Background/StarBackground';
 
 import {
-  FaAnglesUp,
   FaBootstrap,
   FaCloud,
   FaCode,
@@ -78,20 +77,16 @@ import {
   FaDatabase,
   FaDocker,
   FaDollarSign,
-  FaEnvelope,
   FaFacebook,
   FaGift,
   FaGithub,
-  FaGoogle,
   FaHtml5,
   FaInbox,
-  FaInstagram,
   FaJava,
   FaLinkedin,
   FaNodeJs,
   FaPython,
   FaReact,
-  FaRegEnvelope,
   FaSass,
   FaShieldHalved,
   FaVuejs,
