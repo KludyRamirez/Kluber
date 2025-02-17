@@ -154,7 +154,7 @@ const HomePage: React.FC<Home> = () => {
             certifications.
           </div>
           <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
+          <div className="w-full h-[1px] bg-[#2f2f2f]"></div>
           <div className="spacer-small"></div>
           <div className="spacer-xs"></div>
           <Swiper
@@ -317,7 +317,7 @@ const HomePage: React.FC<Home> = () => {
           <div className="spacer-large"></div>
           <div className="text-[#f2f2f2]">Experiences</div>
           <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-[#3c3c3c]"></div>
+          <div className="w-full h-[1px] bg-[#2f2f2f]"></div>
           <div className="spacer-small"></div>
           <h2 className="text-[2.875rem] text-[#f2f2f2] leading-[1.275]">
             <span className="">Check out my medals</span>
@@ -329,7 +329,7 @@ const HomePage: React.FC<Home> = () => {
           <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
           <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-[#3c3c3c]"></div>
+          <div className="w-full h-[1px] bg-[#2f2f2f]"></div>
           <div className="spacer-small"></div>
           <h3 className="text-[1.75rem] text-[#f2f2f2] font-[regular]">
             Recent experiences
@@ -341,7 +341,7 @@ const HomePage: React.FC<Home> = () => {
               <div className="w-full h-[15%] flex justify-center items-start">
                 <div className="w-[14px] h-[14px] flex justify-center items-center bg-gradient-to-b from-[#0FFF50] to-green-600 rounded-[50%]"></div>
               </div>
-              <div className="w-[1px] h-[85%] bg-[#3f3f3f]"></div>
+              <div className="w-[1px] h-[85%] bg-[#3c3c3c]"></div>
             </div>
             <div className="w-[100%] flex flex-col items-start gap-2">
               <div className="text-white text-[14px] leading-none tracking-wide pb-[8px] mt-[1px]">
@@ -379,7 +379,7 @@ const HomePage: React.FC<Home> = () => {
               <div className="w-full h-[15%] flex justify-center items-start">
                 <div className="w-[14px] h-[14px] flex justify-center items-center bg-gradient-to-b from-white to-[#919191] rounded-[50%]"></div>
               </div>
-              <div className="w-[1px] h-[85%] bg-[#3f3f3f]"></div>
+              <div className="w-[1px] h-[85%] bg-[#3c3c3c]"></div>
             </div>
             <div className="w-[100%] flex flex-col items-start gap-2">
               <div className="text-white text-[14px] leading-none tracking-wide pb-[8px] mt-[1px]">
@@ -418,7 +418,7 @@ const HomePage: React.FC<Home> = () => {
               <div className="w-full h-[15%] flex justify-center items-start">
                 <div className="w-[14px] h-[14px] flex justify-center items-center bg-gradient-to-b from-white to-[#919191] rounded-[50%]"></div>
               </div>
-              <div className="w-[1px] h-[85%] bg-[#3f3f3f]"></div>
+              <div className="w-[1px] h-[85%] bg-[#3c3c3c]"></div>
             </div>
             <div className="w-[100%] flex flex-col items-start gap-2">
               <div className="text-white text-[14px] leading-none tracking-wide pb-[8px] mt-[1px]">
@@ -533,7 +533,6 @@ const HomePage: React.FC<Home> = () => {
                     </div>
                   </a>
                 </div>
-
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
                   <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 border-[1px] border-gray-300 bg-white text-[14px] text-[#282828] hover:border-[#282828] hover:bg-[#282828] hover:text-white group-hover:rounded-[32px]">
@@ -560,7 +559,7 @@ const HomePage: React.FC<Home> = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full h-full p-2 group">
+              <div className="w-full h-full p-2 group relative">
                 <div className="absolute -bottom-[190px] right-0 -z-10 hidden group-hover:block">
                   <BubbleEffect />
                 </div>
@@ -571,12 +570,10 @@ const HomePage: React.FC<Home> = () => {
                       className="w-[220px] group-hover:opacity-0 transition-group duration-[400ms] ease-in-out"
                     />
                   </div>
-                  <a href="https://www.aia.com.ph/en/" target="_blank">
-                    <img
-                      src={aiaproj}
-                      className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
-                    />
-                  </a>
+                  <img
+                    src={aiaproj}
+                    className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
+                  />
                 </div>
                 <div className="spacer-small"></div>
                 <div className="flex align-items gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
@@ -585,9 +582,11 @@ const HomePage: React.FC<Home> = () => {
                   <span>by Kludy Ramirez</span>
                 </div>
                 <div className="spacer-xs"></div>
-                <div className="text-[#282828] group-hover:underline">
-                  AIA PH
-                </div>
+                <a href="https://www.aia.com.ph/en/" target="_blank">
+                  <div className="text-[#282828] group-hover:underline">
+                    AIA PH
+                  </div>
+                </a>
                 <div className="spacer-xs"></div>
                 <div className="text-[#282828]">
                   The website covers insurance plans, company info, wellness
@@ -595,7 +594,7 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-xs"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-4">
-                  <a href="https://www.bpi-aia.com.ph/en/" target="_blank">
+                  <a href="https://www.aia.com.ph/en/" target="_blank">
                     <div className="cursor-pointer w-[fit-content] flex justify-center items-center gap-2 p-2 bg-[#f2f2f2] text-[14px] text-[#282828] rounded-[50%] hover:border-[#282828] hover:bg-[#282828] hover:text-white">
                       <FaArrowUpRightFromSquare size={14} />
                     </div>
@@ -626,8 +625,11 @@ const HomePage: React.FC<Home> = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide className="">
-              <div className="w-full h-full p-2 group">
+            <SwiperSlide>
+              <div className="w-full h-full p-2 group relative">
+                <div className="absolute -bottom-[190px] right-0 -z-10 hidden group-hover:block">
+                  <BubbleEffect />
+                </div>
                 <div className="relative cursor-pointer">
                   <div className="absolute flex justify-center items-center top-0 left-0 bg-[#d4003b] w-full h-full group-hover:bg-transparent transition-group duration-[400ms] ease-in-out">
                     <img
@@ -635,12 +637,12 @@ const HomePage: React.FC<Home> = () => {
                       className="w-[220px] group-hover:opacity-0 transition-group duration-[400ms] ease-in-out"
                     />
                   </div>
-                  <a href="https://www.aia.co.th/th" target="_blank">
-                    <img
-                      src={aiathproj}
-                      className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
-                    />
-                  </a>
+
+                  <img
+                    src={aiathproj}
+                    className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
+                  />
+
                 </div>
                 <div className="spacer-small"></div>
                 <div className="flex align-items gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
@@ -649,9 +651,11 @@ const HomePage: React.FC<Home> = () => {
                   <span>by Kludy Ramirez</span>
                 </div>
                 <div className="spacer-xs"></div>
-                <div className="text-[#282828] group-hover:underline">
-                  AIA TH
-                </div>
+                <a href="https://www.aia.co.th/th" target="_blank">
+                  <div className="text-[#282828] group-hover:underline">
+                    AIA TH
+                  </div>
+                </a>
                 <div className="spacer-xs"></div>
                 <div className="text-[#282828]">
                   The website provides insurance plans, company info, wellness
@@ -660,7 +664,7 @@ const HomePage: React.FC<Home> = () => {
                 <div className="spacer-xs"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-4">
                   <div className="w-full flex flex-wrap justify-start items-start gap-4">
-                    <a href="https://www.bpi-aia.com.ph/en/" target="_blank">
+                    <a href="https://www.aia.co.th/th/" target="_blank">
                       <div className="cursor-pointer w-[fit-content] flex justify-center items-center gap-2 p-2 bg-[#f2f2f2] text-[14px] text-[#282828] rounded-[50%] hover:border-[#282828] hover:bg-[#282828] hover:text-white">
                         <FaArrowUpRightFromSquare size={14} />
                       </div>
@@ -701,12 +705,12 @@ const HomePage: React.FC<Home> = () => {
                       className="w-[90px] h-[90px] group-hover:opacity-0 transition-group duration-[400ms] ease-in-out"
                     />
                   </div>
-                  <a href="https://www.bpi-aia.com.ph/en/" target="_blank">
-                    <img
-                      src={plvosaproj}
-                      className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
-                    />
-                  </a>
+
+                  <img
+                    src={plvosaproj}
+                    className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
+                  />
+
                 </div>
                 <div className="spacer-small"></div>
                 <div className="flex align-items gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
@@ -715,9 +719,11 @@ const HomePage: React.FC<Home> = () => {
                   <span>by Kludy Ramirez</span>
                 </div>
                 <div className="spacer-xs"></div>
-                <div className="text-[#282828] group-hover:underline">
-                  PLV OSA Reprimand Hub
-                </div>
+                <a href="https://plv-osa-reprimand-hub.vercel.app/" target="_blank">
+                  <div className="text-[#282828] group-hover:underline">
+                    PLV OSA Reprimand Hub
+                  </div>
+                </a>
                 <div className="spacer-xs"></div>
                 <div className="text-[#282828]">
                   A web-based digital hub where the pamantasan can handle
@@ -725,14 +731,12 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-xs"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-4">
-                  <a href="https://www.aia.com.ph/en/" target="_blank">
-                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
-                      <div className="mt-[2px] tracking-wide">Link</div>
-                    </div>
-                  </a>
-
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
-                    <div className="mt-[2px] tracking-wide">Github</div>
+                  <div className="w-full flex flex-wrap justify-start items-start gap-4">
+                    <a href="https://plv-osa-reprimand-hub.vercel.app/" target="_blank">
+                      <div className="cursor-pointer w-[fit-content] flex justify-center items-center gap-2 p-2 bg-[#f2f2f2] text-[14px] text-[#282828] rounded-[50%] hover:border-[#282828] hover:bg-[#282828] hover:text-white">
+                        <FaArrowUpRightFromSquare size={14} />
+                      </div>
+                    </a>
                   </div>
                 </div>
                 <div className="spacer-small"></div>
@@ -1033,7 +1037,7 @@ const HomePage: React.FC<Home> = () => {
           <div className="spacer-large"></div>
           <div className="text-[#f2f2f2]">Badges and Certifications</div>
           <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
+          <div className="w-full h-[1px] bg-[#2f2f2f]"></div>
           <div className="spacer-small"></div>
           <h2 className="text-[2.875rem] text-[#f2f2f2] leading-[1.275]">
             <span className="">Check out my medals</span>
@@ -1045,7 +1049,7 @@ const HomePage: React.FC<Home> = () => {
           <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
           <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
+          <div className="w-full h-[1px] bg-[#2f2f2f]"></div>
           <div className="spacer-small"></div>
           <h3 className="text-[1.75rem] text-[#f2f2f2] font-[regular]">
             Recent badges
@@ -1781,7 +1785,7 @@ const HomePage: React.FC<Home> = () => {
           </Swiper>
           <div className="spacer-medium"></div>
           <div className="spacer-small"></div>
-          <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
+          <div className="w-full h-[1px] bg-[#2f2f2f]"></div>
           <div className="spacer-small"></div>
           <h3 className="text-[1.75rem] text-[#f2f2f2] font-[regular]">
             Recent certifications
@@ -1833,7 +1837,7 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#808080]/10 group-hover:bg-[#efefef] text-[14px] text-gray-300 gap-2">
+                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 bg-[#808080]/10 group-hover:bg-[#FFD700] text-[14px] text-gray-300 gap-2">
                     <div className="w-[10px] h-[10px] bg-gray-300 rounded-[50%] group-hover:bg-[#282828]"></div>
                     <div className="mt-[2px] tracking-wide group-hover:text-[#282828]">
                       Certification
