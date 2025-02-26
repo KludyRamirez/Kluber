@@ -7,10 +7,10 @@ import 'swiper/swiper-bundle.css';
 import microsoft from '../assets/images/microsoft.svg';
 import opswat from '../assets/images/opswat.svg';
 import oracle from '../assets/images/oracle.svg';
-import coursera from '../assets/images/coursera.svg';
+import udemy from '../assets/images/udemy.svg';
 import codecademy from '../assets/images/codecademy.svg';
 import azure from '../assets/images/azure.svg';
-import appbrewery from '../assets/images/appbrewery.svg';
+import cisco from '../assets/images/cisco.svg';
 import sc900 from '../assets/images/sc900.png';
 import ociaipro from '../assets/images/ociaipro.png';
 import ociai from '../assets/images/ociai.png';
@@ -188,7 +188,7 @@ const HomePage: React.FC<Home> = () => {
               <img src={microsoft} />
             </SwiperSlide>
             <SwiperSlide className="">
-              <img src={appbrewery} />
+              <img src={cisco} />
             </SwiperSlide>
             <SwiperSlide className="">
               <img src={azure} />
@@ -200,7 +200,7 @@ const HomePage: React.FC<Home> = () => {
               <img src={bitbucket} />
             </SwiperSlide>
             <SwiperSlide className="">
-              <img src={coursera} />
+              <img src={udemy} />
             </SwiperSlide>
             <SwiperSlide className="">
               <img src={opswat} />
@@ -662,15 +662,15 @@ const HomePage: React.FC<Home> = () => {
                   programs, and support.
                 </div>
                 <div className="spacer-xs"></div>
+
                 <div className="w-full flex flex-wrap justify-start items-start gap-4">
-                  <div className="w-full flex flex-wrap justify-start items-start gap-4">
-                    <a href="https://www.aia.co.th/th/" target="_blank">
-                      <div className="cursor-pointer w-[fit-content] flex justify-center items-center gap-2 p-2 bg-[#f2f2f2] text-[14px] text-[#282828] rounded-[50%] hover:border-[#282828] hover:bg-[#282828] hover:text-white">
-                        <FaArrowUpRightFromSquare size={14} />
-                      </div>
-                    </a>
-                  </div>
+                  <a href="https://www.aia.co.th/th/" target="_blank">
+                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center gap-2 p-2 bg-[#f2f2f2] text-[14px] text-[#282828] rounded-[50%] hover:border-[#282828] hover:bg-[#282828] hover:text-white">
+                      <FaArrowUpRightFromSquare size={14} />
+                    </div>
+                  </a>
                 </div>
+
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
                   <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 border-[1px] border-gray-300 bg-white text-[14px] text-[#282828] hover:border-[#282828] hover:bg-[#282828] hover:text-white group-hover:rounded-[32px]">
@@ -697,7 +697,10 @@ const HomePage: React.FC<Home> = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide className="">
-              <div className="w-full h-full p-2 group">
+              <div className="w-full h-full p-2 group relative">
+                <div className="absolute -bottom-[190px] right-0 -z-10 hidden group-hover:block">
+                  <BubbleEffect />
+                </div>
                 <div className="relative cursor-pointer">
                   <div className="absolute flex justify-center items-center top-0 left-0 bg-[#87fdff] w-full h-full group-hover:bg-transparent transition-group duration-[400ms] ease-in-out">
                     <img
@@ -731,14 +734,13 @@ const HomePage: React.FC<Home> = () => {
                 </div>
                 <div className="spacer-xs"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-4">
-                  <div className="w-full flex flex-wrap justify-start items-start gap-4">
-                    <a href="https://plv-osa-reprimand-hub.vercel.app/" target="_blank">
-                      <div className="cursor-pointer w-[fit-content] flex justify-center items-center gap-2 p-2 bg-[#f2f2f2] text-[14px] text-[#282828] rounded-[50%] hover:border-[#282828] hover:bg-[#282828] hover:text-white">
-                        <FaArrowUpRightFromSquare size={14} />
-                      </div>
-                    </a>
-                  </div>
+                  <a href="https://plv-osa-reprimand-hub.vercel.app/" target="_blank">
+                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center gap-2 p-2 bg-[#f2f2f2] text-[14px] text-[#282828] rounded-[50%] hover:border-[#282828] hover:bg-[#282828] hover:text-white">
+                      <FaArrowUpRightFromSquare size={14} />
+                    </div>
+                  </a>
                 </div>
+
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
                   <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 border-[1px] border-gray-300 bg-white text-[14px] text-[#282828] hover:border-[#282828] hover:bg-[#282828] hover:text-white group-hover:rounded-[32px]">
@@ -765,7 +767,10 @@ const HomePage: React.FC<Home> = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full h-full p-2 group">
+              <div className="w-full h-full p-2 group relative">
+                <div className="absolute -bottom-[190px] right-0 -z-10 hidden group-hover:block">
+                  <BubbleEffect />
+                </div>
                 <div className="relative cursor-pointer">
                   <div className="absolute flex justify-center items-center top-0 left-0 bg-[#F4BB44] w-full h-full group-hover:bg-transparent transition-group duration-[400ms] ease-in-out">
                     <img
@@ -773,12 +778,10 @@ const HomePage: React.FC<Home> = () => {
                       className="w-[200px] group-hover:opacity-0 transition-group duration-[400ms] ease-in-out"
                     />
                   </div>
-                  <a href="https://www.bpi-aia.com.ph/en/" target="_blank">
-                    <img
-                      src={mlacproj}
-                      className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
-                    />
-                  </a>
+                  <img
+                    src={mlacproj}
+                    className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
+                  />
                 </div>
                 <div className="spacer-small"></div>
                 <div className="flex align-items gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
@@ -787,24 +790,20 @@ const HomePage: React.FC<Home> = () => {
                   <span>by Kludy Ramirez</span>
                 </div>
                 <div className="spacer-xs"></div>
-                <div className="text-[#282828] group-hover:underline">MLAC</div>
+                <a href="https://mlac-homeweb.vercel.app/" target="_blank">
+                  <div className="text-[#282828] group-hover:underline">MLAC</div>
+                </a>
                 <div className="spacer-xs"></div>
                 <div className="text-[#282828]">
-                  A web-based application where parents of MLAC students can
-                  dynamically handle their children's attendance on their
-                  therapies every week.
+                  A web-based application for MLAC parents to manage their children's weekly therapy attendance.
                 </div>
                 <div className="spacer-xs"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-4">
-                  <a href="https://www.aia.com.ph/en/" target="_blank">
-                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
-                      <div className="mt-[2px] tracking-wide">Link</div>
+                  <a href="https://mlac-homeweb.vercel.app/" target="_blank">
+                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center gap-2 p-2 bg-[#f2f2f2] text-[14px] text-[#282828] rounded-[50%] hover:border-[#282828] hover:bg-[#282828] hover:text-white">
+                      <FaArrowUpRightFromSquare size={14} />
                     </div>
                   </a>
-
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
-                    <div className="mt-[2px] tracking-wide">Github</div>
-                  </div>
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
@@ -832,7 +831,10 @@ const HomePage: React.FC<Home> = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full h-full p-2 group">
+              <div className="w-full h-full p-2 group relative">
+                <div className="absolute -bottom-[190px] right-0 -z-10 hidden group-hover:block">
+                  <BubbleEffect />
+                </div>
                 <div className="relative cursor-pointer">
                   <div className="absolute flex justify-center items-center top-0 left-0 bg-[#d21045] w-full h-full group-hover:bg-transparent transition-group duration-[400ms] ease-in-out">
                     <img
@@ -840,12 +842,10 @@ const HomePage: React.FC<Home> = () => {
                       className="w-[100px] group-hover:opacity-0 transition-group duration-[400ms] ease-in-out"
                     />
                   </div>
-                  <a href="https://www.bpi-aia.com.ph/en/" target="_blank">
-                    <img
-                      src={apdtechexam}
-                      className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
-                    />
-                  </a>
+                  <img
+                    src={apdtechexam}
+                    className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
+                  />
                 </div>
                 <div className="spacer-small"></div>
                 <div className="flex align-items gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
@@ -854,27 +854,24 @@ const HomePage: React.FC<Home> = () => {
                   <span>by Kludy Ramirez</span>
                 </div>
                 <div className="spacer-xs"></div>
-                <div className="text-[#282828] group-hover:underline">
-                  GrowthOps Technical Exam
-                </div>
+                <a href="https://techassessmentgrowthops.web.app/" target="_blank">
+                  <div className="text-[#282828] group-hover:underline">
+                    GrowthOps Technical Exam
+                  </div>
+                </a>
                 <div className="spacer-xs"></div>
                 <div className="text-[#282828]">
-                  I completed a technical assessment at GrowthOps where I built
-                  the necessary components and retrieved data from a web
-                  service.
+                  Technical assessment at GrowthOps, building components and retrieving data from a web service.
                 </div>
                 <div className="spacer-xs"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-4">
-                  <a href="https://www.aia.com.ph/en/" target="_blank">
-                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
-                      <div className="mt-[2px] tracking-wide">Link</div>
+                  <a href="https://techassessmentgrowthops.web.app/" target="_blank">
+                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center gap-2 p-2 bg-[#f2f2f2] text-[14px] text-[#282828] rounded-[50%] hover:border-[#282828] hover:bg-[#282828] hover:text-white">
+                      <FaArrowUpRightFromSquare size={14} />
                     </div>
                   </a>
-
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
-                    <div className="mt-[2px] tracking-wide">Github</div>
-                  </div>
                 </div>
+
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
                   <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 border-[1px] border-gray-300 bg-white text-[14px] text-[#282828] hover:border-[#282828] hover:bg-[#282828] hover:text-white group-hover:rounded-[32px]">
@@ -901,7 +898,10 @@ const HomePage: React.FC<Home> = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full h-full p-2 group">
+              <div className="w-full h-full p-2 group relative">
+                <div className="absolute -bottom-[190px] right-0 -z-10 hidden group-hover:block">
+                  <BubbleEffect />
+                </div>
                 <div className="relative cursor-pointer">
                   <div className="absolute flex justify-center items-center top-0 left-0 bg-[#0054a6] w-full h-full group-hover:bg-transparent transition-group duration-[400ms] ease-in-out">
                     <img
@@ -909,12 +909,10 @@ const HomePage: React.FC<Home> = () => {
                       className="w-[200px] group-hover:opacity-0 transition-group duration-[400ms] ease-in-out"
                     />
                   </div>
-                  <a href="https://www.bpi-aia.com.ph/en/" target="_blank">
-                    <img
-                      src={galatictechexamsproj}
-                      className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
-                    />
-                  </a>
+                  <img
+                    src={galatictechexamsproj}
+                    className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
+                  />
                 </div>
                 <div className="spacer-small"></div>
                 <div className="flex align-items gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
@@ -923,38 +921,30 @@ const HomePage: React.FC<Home> = () => {
                   <span>by Kludy Ramirez</span>
                 </div>
                 <div className="spacer-xs"></div>
-                <div className="text-[#282828] group-hover:underline">
-                  Galatic Technical Exams
-                </div>
+                <a href="https://galatic-first-card-assessment.netlify.app/" target="_blank">
+                  <div className="text-[#282828] group-hover:underline">
+                    Galatic Technical Exams
+                  </div>
+                </a>
                 <div className="spacer-xs"></div>
                 <div className="text-[#282828]">
-                  This exams measure my skills on HTML, CSS, SCSS, and its core
-                  principles and my techniques on front-end development.
+                  This exam assesses my skills in HTML, CSS, SCSS, and front-end development principles.
                 </div>
                 <div className="spacer-xs"></div>
-                <div className="w-full flex flex-wrap justify-start items-start gap-4">
-                  <a
-                    href="https://galatic-first-card-assessment.netlify.app/"
-                    target="_blank"
-                  >
-                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
-                      <div className="mt-[2px] tracking-wide">Link 1</div>
+
+                <div className="w-full flex flex-wrap justify-start items-start gap-2">
+                  <a href="https://galatic-first-card-assessment.netlify.app/" target="_blank">
+                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center gap-2 p-2 bg-[#f2f2f2] text-[14px] text-[#282828] rounded-[50%] hover:border-[#282828] hover:bg-[#282828] hover:text-white">
+                      <FaArrowUpRightFromSquare size={14} />
                     </div>
                   </a>
-
-                  <a
-                    href="https://galatic-second-card-assessment.netlify.app/"
-                    target="_blank"
-                  >
-                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
-                      <div className="mt-[2px] tracking-wide">Link 2</div>
+                  <a href="https://galatic-second-card-assessment.netlify.app/" target="_blank">
+                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center gap-2 p-2 bg-[#f2f2f2] text-[14px] text-[#282828] rounded-[50%] hover:border-[#282828] hover:bg-[#282828] hover:text-white">
+                      <FaArrowUpRightFromSquare size={14} />
                     </div>
                   </a>
-
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
-                    <div className="mt-[2px] tracking-wide">Github</div>
-                  </div>
                 </div>
+
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
                   <div className="cursor-pointer w-[fit-content] flex justify-center items-center py-1 px-3 gap-2 border-[1px] border-gray-300 bg-white text-[14px] text-[#282828] hover:border-[#282828] hover:bg-[#282828] hover:text-white group-hover:rounded-[32px]">
@@ -973,7 +963,10 @@ const HomePage: React.FC<Home> = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full h-full p-2 group">
+              <div className="w-full h-full p-2 group relative">
+                <div className="absolute -bottom-[190px] right-0 -z-10 hidden group-hover:block">
+                  <BubbleEffect />
+                </div>
                 <div className="relative cursor-pointer">
                   <div className="absolute flex justify-center items-center top-0 left-0 bg-[#673098] w-full h-full group-hover:bg-transparent transition-group duration-[400ms] ease-in-out">
                     <img
@@ -981,12 +974,10 @@ const HomePage: React.FC<Home> = () => {
                       className="w-[200px] group-hover:opacity-0 transition-group duration-[400ms] ease-in-out"
                     />
                   </div>
-                  <a href="https://www.bpi-aia.com.ph/en/" target="_blank">
-                    <img
-                      src={regformproj}
-                      className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
-                    />
-                  </a>
+                  <img
+                    src={regformproj}
+                    className="opacity-0 group-hover:opacity-100 cursor-pointer aspect-[3/2] z-20 transition-group duration-[400ms] ease-in-out"
+                  />
                 </div>
                 <div className="spacer-small"></div>
                 <div className="flex align-items gap-2 text-[.850rem] text-gray-500 font-[extra-light]">
@@ -995,25 +986,23 @@ const HomePage: React.FC<Home> = () => {
                   <span>by Kludy Ramirez</span>
                 </div>
                 <div className="spacer-xs"></div>
-                <div className="text-[#282828] group-hover:underline">
-                  Registration Page Exam
-                </div>
+                <a href="https://vue-nuxt-2-registration-form.vercel.app/" target="_blank">
+                  <div className="text-[#282828] group-hover:underline">
+                    Registration Page Exam
+                  </div>
+                </a>
                 <div className="spacer-xs"></div>
                 <div className="text-[#282828]">
-                  A registration form built on Vue 2 and Nuxt 2 for Galatic
+                  A registration form built on Nuxt 2 for Galatic
                   Events Corporation.
                 </div>
                 <div className="spacer-xs"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-4">
-                  <a href="https://www.aia.com.ph/en/" target="_blank">
-                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
-                      <div className="mt-[2px] tracking-wide">Link</div>
+                  <a href="https://vue-nuxt-2-registration-form.vercel.app/" target="_blank">
+                    <div className="cursor-pointer w-[fit-content] flex justify-center items-center gap-2 p-2 bg-[#f2f2f2] text-[14px] text-[#282828] rounded-[50%] hover:border-[#282828] hover:bg-[#282828] hover:text-white">
+                      <FaArrowUpRightFromSquare size={14} />
                     </div>
                   </a>
-
-                  <div className="cursor-pointer w-[fit-content] flex justify-center items-center text-[14px] text-[#282828] gap-2 hover:underline">
-                    <div className="mt-[2px] tracking-wide">Github</div>
-                  </div>
                 </div>
                 <div className="spacer-small"></div>
                 <div className="w-full flex flex-wrap justify-start items-start gap-2">
